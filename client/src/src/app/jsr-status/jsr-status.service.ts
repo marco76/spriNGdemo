@@ -23,6 +23,7 @@ export class JsrStatusService {
     return this.http
       .get(this.serverUrl + "/rest/read-file", options)
       .map((response: Response) => {
+      console.log(response);
         return response.json();
       }, (error) => {
         error.json();
