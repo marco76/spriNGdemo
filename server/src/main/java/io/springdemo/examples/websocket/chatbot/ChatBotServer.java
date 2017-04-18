@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.validation.ConstraintViolationException;
-import javax.validation.Valid;
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
@@ -15,12 +14,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-@ServerEndpoint(value = "/chatbot",
-        encoders = {ClientMessage.class}, decoders = {ClientMessage.class})
+@ServerEndpoint(value = "/chatbotserver")
 @CrossOrigin()
-// with singleton common chat we want a one-to-one
-//@Singleton
 public class ChatBotServer {
+
     private static final Logger logger = Logger
             .getLogger(ChatBotServer.class.getName());
 
@@ -43,7 +40,7 @@ public class ChatBotServer {
     }
 
     @OnMessage
-    public void onMessage(@Valid ClientMessage message, Session session) {
+    public void handleMessage(Session session, String message) throws IOException {
         logger.log(Level.INFO, "Received message {0} from peer {1}",
                 new Object[]{message, session});
 
@@ -61,11 +58,11 @@ public class ChatBotServer {
         createAnswer(message, session);
     }
 
-    private void createAnswer(ClientMessage message, Session session) {
-         if (message.getMessage() == null) {
+    private void createAnswer(String message, Session session) {
+         if (message == null) {
              return;
          }
-         String content = message.getMessage();
+         String content = message;
          if (content.toUpperCase().contains("HI")) {
              try {
                  ClientMessage clientMessage = new ClientMessage();

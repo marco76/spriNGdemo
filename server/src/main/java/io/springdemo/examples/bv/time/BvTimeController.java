@@ -2,6 +2,8 @@ package io.springdemo.examples.bv.time;
 
 import io.springdemo.common.web.json.JsonResponseFactory;
 import io.springdemo.common.web.json.ValidationErrorBeanFactory;
+import io.springdemo.common.web.response.ResponseFactory;
+import io.springdemo.examples.bv.simple.Participant;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,6 +29,8 @@ public class BvTimeController {
     Validator validator;
     @Inject
     ValidationErrorBeanFactory validationErrorBeanFactory;
+    @Inject
+    ResponseFactory<Patient> responseFactory;
 
     public BvTimeController() {
 
@@ -44,7 +48,7 @@ public class BvTimeController {
         Set<ConstraintViolation<Patient>> constraintViolationSet;
         constraintViolationSet = validator.validate(patient);
 
-        return ResponseEntity.ok(validationErrorBeanFactory.buildJsonResponse(constraintViolationSet));
+        return responseFactory.buildResponse(constraintViolationSet);
     }
 
     private LocalDate convertDate(String dateAsString) {

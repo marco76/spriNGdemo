@@ -17,6 +17,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <demo.version>0.0.1-SNAPSHOT</demo.version>
+        <spring.web.reactive>5.0.0.M4</spring.web.reactive>
     </properties>
 
     <artifactId>server</artifactId>
@@ -98,6 +99,13 @@
             <version>2.0</version>
         </dependency>
 
+        <!-- reactive -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web-reactive</artifactId>
+            <version>${spring.web.reactive}</version>
+        </dependency>
+
 
     <!-- monitoring -->
     <dependency>
@@ -111,6 +119,10 @@
         <artifactId>spring-boot-starter-test</artifactId>
         <scope>test</scope>
     </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

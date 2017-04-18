@@ -1,6 +1,8 @@
 package io.springdemo.examples.bv.simple;
 
 import io.springdemo.common.web.json.ValidationErrorBeanFactory;
+import io.springdemo.common.web.response.ResponseFactory;
+import io.springdemo.examples.bv.repeatable.User;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -25,6 +27,8 @@ public class BvController {
 
     @Inject
     ValidationErrorBeanFactory validationErrorBeanFactory;
+    @Inject
+    ResponseFactory<Participant> responseFactory;
 
     public BvController() {
 
@@ -39,7 +43,7 @@ public class BvController {
 
         Set<ConstraintViolation<Participant>> constraintViolationSet = validator.validate(participant);
 
-        return ResponseEntity.ok(validationErrorBeanFactory.buildJsonResponse(constraintViolationSet));
+        return responseFactory.buildResponse(constraintViolationSet);
 
     }
 }

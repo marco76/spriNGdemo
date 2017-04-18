@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatbotService } from './chatbot.service';
-import {Message} from "./Message";
 
 @Component({
   selector: 'app-chatbot',
@@ -10,7 +9,8 @@ import {Message} from "./Message";
 })
 export class ChatbotComponent implements OnInit {
 
-  constructor(private chatbotService : ChatbotService) { }
+  constructor(private chatbotService : ChatbotService) {
+  }
   messages : string[];
   lastMessage : string;
 

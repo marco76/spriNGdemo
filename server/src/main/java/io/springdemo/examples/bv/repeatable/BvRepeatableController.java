@@ -2,6 +2,8 @@ package io.springdemo.examples.bv.repeatable;
 
 import io.springdemo.common.web.json.JsonResponseFactory;
 import io.springdemo.common.web.json.ValidationErrorBeanFactory;
+import io.springdemo.common.web.response.ResponseFactory;
+import io.springdemo.examples.bv.emailList.Addresses;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +26,8 @@ public class BvRepeatableController {
     Validator validator;
     @Inject
     ValidationErrorBeanFactory validationErrorBeanFactory;
+    @Inject
+    ResponseFactory<User> responseFactory;
 
     public BvRepeatableController() {
 
@@ -43,7 +47,6 @@ public class BvRepeatableController {
             constraintViolationSet = validator.validate(user);
         }
 
-
-        return ResponseEntity.ok(validationErrorBeanFactory.buildJsonResponse(constraintViolationSet));
+        return responseFactory.buildResponse(constraintViolationSet);
     }
 }
