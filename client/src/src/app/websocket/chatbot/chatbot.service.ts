@@ -7,7 +7,7 @@ import {Message} from "./Message";
 import {environment} from '../../../environments/environment';
 
 
-const CHAT_URL = environment.WS_BACKEND_URL+"/chatbot";
+const CHAT_URL = environment.WS_BACKEND_URL+"/chatbotserver";
 
 @Injectable()
 export class ChatbotService {

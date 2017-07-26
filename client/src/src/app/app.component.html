@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <div class="navbar-brand">
-        <span routerLink="/">Java EE 8 Demo</span>
+        <span routerLink="/">Spring Boot 2.0 / Angular 4 Demo</span>
       </div>
          <ul class="nav navbar-nav">
            <li> <a routerLink="/">Home</a></li>
@@ -36,6 +36,8 @@
              </a>
              <ul dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu">
                <li role="menuitem"><a class="dropdown-item" routerLink="/extra-cache">@Schedule, file caching example</a></li>
+               <li role="menuitem"><a class="dropdown-item" routerLink="/load-image">Load image from resources</a></li>
+
              </ul>
 
                </li>
@@ -59,4 +61,6 @@
 </nav>
 <div class="container-fluid">
     <router-outlet></router-outlet>
+  <br><br>
+  <div id="disqus_thread"></div>
 </div>

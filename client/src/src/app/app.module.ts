@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { BvSimpleOneComponent } from './bv/bv-simple-one/bv-simple-one';
 import { DropdownModule } from 'ng2-bootstrap/dropdown';
 import { PrettyJsonPipe } from './common/pretty-json/prettyJson.pipe';
-import { HighlightJsModule, HighlightJsService } from '../../node_modules/angular2-highlight-js';
+import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
 import { BvDateComponent } from './bv/bv-date/bv-date.component';
 import { BvListEmail } from './bv/bv-list-email/bv-list-email.component';
 
@@ -17,10 +17,11 @@ import { BvRepeatableComponent } from './bv/bv-repeatable/bv-repeatable.componen
 import { TechnicalInfo } from './common/technical-info/technical-info.component';
 import { MaskDirective } from './common/mask/mask-directive';
 import { JsrStatusComponent } from './jsr-status/jsr-status.component';
-import {HttpClient} from "./common/http/HttpClient";
+import { HttpClient } from "./common/http/HttpClient";
 import { CacheFileComponent } from './extra/cache-file/cache-file.component';
 import { ChatbotComponent } from './websocket/chatbot/chatbot.component';
-import {WebSocketService} from "./websocket/chatbot/websocket.service";
+import { WebSocketService } from "./websocket/chatbot/websocket.service";
+import { ImageComponent } from "./extra/image/image.component";
 
 const routes : Routes = [
   { path: '', redirectTo: 'home', pathMatch:'full' },
@@ -30,7 +31,9 @@ const routes : Routes = [
   { path: 'bv-repeatable', component: BvRepeatableComponent },
   { path: 'bv-list-email', component: BvListEmail },
   { path: 'extra-cache', component: CacheFileComponent},
-  { path: 'chatbot', component:ChatbotComponent}
+  { path: 'chatbot', component:ChatbotComponent},
+  { path: 'load-image', component:ImageComponent}
+
 ];
 
 @NgModule({
@@ -46,7 +49,8 @@ const routes : Routes = [
     MaskDirective,
     JsrStatusComponent,
     CacheFileComponent,
-    ChatbotComponent
+    ChatbotComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,

@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>parent</artifactId>
-        <groupId>java-demo</groupId>
+        <groupId>spring-ng-demo</groupId>
         <version>0.0.1-SNAPSHOT</version>
 
     </parent>
@@ -59,11 +59,10 @@
                     <webResources>
                         <resource>
                             <directory>src/dist</directory>
-                            <targetPath>/</targetPath>
+                            <targetPath>META-INF/resources</targetPath>
                         </resource>
                     </webResources></configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>

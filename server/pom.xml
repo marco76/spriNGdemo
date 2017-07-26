@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>parent</artifactId>
-        <groupId>java-demo</groupId>
+        <groupId>spring-ng-demo</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <packaging>war</packaging>
@@ -16,6 +16,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml>
+        <demo.version>0.0.1-SNAPSHOT</demo.version>
+        <spring.web.reactive>5.0.0.M4</spring.web.reactive>
     </properties>
 
     <artifactId>server</artifactId>
@@ -23,21 +25,39 @@
     <dependencies>
 
         <dependency>
-            <groupId>java-demo</groupId>
+            <groupId>spring-ng-demo</groupId>
             <artifactId>client</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <type>war</type>
         </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <exclusions>
+            <exclusion>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
             <version>6.0.0.Alpha2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.validation</groupId>
+                    <artifactId>validation-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
-        <!-- json-b -->
-        <!-- comes with yasson -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.0.Alpha2</version>
+        </dependency>
         <dependency>
             <groupId>javax.json.bind</groupId>
             <artifactId>javax.json.bind-api</artifactId>
@@ -55,87 +75,71 @@
             <artifactId>javax.json</artifactId>
             <version>1.1</version>
         </dependency>
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>com.h2database</groupId>
+        <artifactId>h2</artifactId>
+        <version>${h2.version}</version>
+    </dependency>
 
         <dependency>
             <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator-cdi</artifactId>
             <version>6.0.0.CR3</version>
         </dependency>
-      <!--
-       ERROR : "WFLYCTL0412: Required services that are not installed:" => ["jboss.deployment.unit.\"ROOT.war\".WeldStartService"]}
 
+        <!-- reactive -->
         <dependency>
-            <groupId>org.glassfish.soteria</groupId>
-            <artifactId>soteria</artifactId>
-            <version>1.0-m03-SNAPSHOT</version>
-        </dependency>
- -->
-
-        <!-- THIS HAS TO STAY IN THE LAST POSITION -->
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>7.0</version>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>javax.validation</groupId>
-                    <artifactId>validation-api</artifactId>
-                </exclusion>
-            </exclusions>
-
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web-reactive</artifactId>
+            <version>${spring.web.reactive}</version>
         </dependency>
 
-        <!-- These dependencies should be eliminated with the final version of Java EE and JSON-B -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.8.5</version>
-        </dependency>
 
+    <!-- monitoring -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+
+    <!-- Test -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
-        <finalName>ROOT</finalName>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.0.0</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>1.5.2.RELEASE</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
-
-
-        <repositories>
-            <!-- Needed for JSON-B API -->
-            <repository>
-                <id>java.net-Public</id>
-                <name>Maven Java Net Snapshots and Releases</name>
-                <url>https://maven.java.net/content/groups/public/</url>
-            </repository>
-
-            <!-- Needed for Yasson -->
-            <repository>
-                <id>yasson-snapshots</id>
-                <name>Yasson Snapshots repository</name>
-                <url>https://repo.eclipse.org/content/repositories/yasson-snapshots</url>
-            </repository>
-            <repository>
-                <id>jboss-maven2-release-repository</id>
-                <name>JBoss</name>
-                <url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
-            </repository>
-
-            <!-- used for soteria -->
-            <repository>
-                <snapshots>
-                    <enabled>true</enabled>
-                </snapshots>
-                <id>bintray-snapshot</id>
-                <name>libs-snapshot</name>
-                <url>http://oss.jfrog.org/artifactory/libs-snapshot</url>
-            </repository>
-            </repositories>
 
 </project>
