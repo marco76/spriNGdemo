@@ -1,4 +1,4 @@
-package io.springdemo.examples.readfile;
+package io.springdemo.examples.readdocumentation;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

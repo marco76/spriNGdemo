@@ -14,7 +14,7 @@ Topics are:
 - Delivery
 - Code quality
 
-![alt text](http://localhost:8080/images/architecture.svg "Logo Title Text 1")
+![alt text](http://localhost:8080/images/architecture.png)
 
 
 Central topics are code quality and code delivery.

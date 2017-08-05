@@ -1,6 +1,6 @@
 package io.springdemo.controller.document;
 
-import io.springdemo.examples.readfile.ReadDocumentationService;
+import io.springdemo.examples.readdocumentation.ReadDocumentationService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

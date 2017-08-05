@@ -1,4 +1,4 @@
-package io.springdemo.examples.readfile;
+package io.springdemo.examples.readdocumentation;
 
 public interface ReadDocumentationService {
 
