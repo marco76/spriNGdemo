@@ -1,4 +1,4 @@
-package io.springdemo.examples.readFile;
+package io.springdemo.examples.readfile;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

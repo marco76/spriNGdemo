@@ -12,6 +12,8 @@ import { PrettyJsonPipe } from './common/pretty-json/prettyJson.pipe';
 import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
 import { BvDateComponent } from './bv/bv-date/bv-date.component';
 import { BvListEmail } from './bv/bv-list-email/bv-list-email.component';
+import { MarkdownModule } from 'angular2-markdown';
+
 
 import { BvRepeatableComponent } from './bv/bv-repeatable/bv-repeatable.component';
 import { TechnicalInfo } from './common/technical-info/technical-info.component';
@@ -22,6 +24,20 @@ import { CacheFileComponent } from './extra/cache-file/cache-file.component';
 import { ChatbotComponent } from './websocket/chatbot/chatbot.component';
 import { WebSocketService } from "./websocket/chatbot/websocket.service";
 import { ImageComponent } from "./extra/image/image.component";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MdButtonModule, MdCheckboxModule } from '@angular/material';
+import {MdMenuModule} from '@angular/material';
+import {MdToolbarModule} from '@angular/material';
+import {MdCardModule} from '@angular/material';
+import {MdInputModule} from '@angular/material';
+import { MdIconModule} from '@angular/material';
+import { CovalentLayoutModule, CovalentStepsModule /*, any other modules */ } from '@covalent/core';
+// (optional) Additional Covalent Modules imports
+import { CovalentHttpModule } from '@covalent/http';
+import { CovalentHighlightModule } from '@covalent/highlight';
+import { CovalentMarkdownModule } from '@covalent/markdown';
+import { CovalentDynamicFormsModule } from '@covalent/dynamic-forms';
+
 
 const routes : Routes = [
   { path: '', redirectTo: 'home', pathMatch:'full' },
@@ -59,7 +75,23 @@ const routes : Routes = [
     DropdownModule.forRoot(),
     AlertModule.forRoot(),
     RouterModule.forRoot(routes),
-    HttpModule
+    MarkdownModule.forRoot(),
+    HttpModule,
+    BrowserAnimationsModule,
+    MdButtonModule, MdCheckboxModule,
+    MdMenuModule,
+    MdToolbarModule,
+    MdCardModule,
+    MdInputModule,
+    CovalentLayoutModule,
+    CovalentStepsModule,
+    // (optional) Additional Covalent Modules imports
+    CovalentHttpModule.forRoot(),
+    CovalentHighlightModule,
+    CovalentMarkdownModule,
+    CovalentDynamicFormsModule,
+    MdIconModule
+
   ],
   providers: [HighlightJsService, HttpClient, WebSocketService],
   bootstrap: [AppComponent]

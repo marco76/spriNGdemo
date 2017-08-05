@@ -10,7 +10,7 @@ import { JSRStatus } from './JSRStatus';
 })
 export class JsrStatusComponent implements OnInit {
 
-  jsrStatusList : JSRStatus[];
+  jsrStatusList: JSRStatus[];
 
   constructor(private jsrStatusService : JsrStatusService) { }
 

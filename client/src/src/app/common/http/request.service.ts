@@ -16,12 +16,12 @@ export class RequestService implements OnInit{
   serverUrl : string = environment.BACKEND_URL;
   responseOK : {"responseStatus" : "OK"};
 
-  private headers : Headers;
+  private headers: Headers;
 
   constructor(private http: Http) { }
 
-  sendRequest(url:string, model : any) : Observable<any> {
-
+  sendRequest(url: string, model: any): Observable<any> {
+ console.log("sendRequest");
     let options = new RequestOptions({ headers: this.headers });
 
     return this.http
@@ -42,7 +42,45 @@ export class RequestService implements OnInit{
       );
   }
 
-  buildErrorAnswer(error) : ResponseInfo{
+  getText(url: string): Observable<any> {
+
+    const options = new RequestOptions({ headers: this.headers });
+
+    return this.http
+      .get(this.serverUrl + '/' + url, options)
+      .map((response: Response) => {
+         console.log(response);
+         return response.text();
+      }).catch((error) =>
+        Observable.of(this.buildErrorAnswer(error))
+      );
+  }
+
+  sendGet(url:string): Observable<any> {
+
+    let options = new RequestOptions({ headers: this.headers });
+
+    console.log(this.serverUrl + url);
+
+
+    return this.http
+      .get(this.serverUrl + '/' + url, options)
+      .map((response: Response) => {
+        let responseInfo = new ResponseInfo();
+        responseInfo.status = response.status;
+        if (response.text()) {
+          responseInfo.text = response.json();
+        } else {
+          responseInfo.text = "";
+        }
+        responseInfo.error = false;
+        return responseInfo;
+      }).catch((error) =>
+        Observable.of(this.buildErrorAnswer(error))
+      );
+  }
+
+  buildErrorAnswer(error) : ResponseInfo {
     console.log(error);
     let responseInfo = new ResponseInfo();
     responseInfo.status = error.status;

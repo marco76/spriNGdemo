@@ -15,7 +15,7 @@ public class Patient {
     @Past
     private Year yearOfBirth;
 
-    @Future(orPresent = true)
+    @FutureOrPresent
     private LocalDate nextAppointment;
 
     public String getName() {
