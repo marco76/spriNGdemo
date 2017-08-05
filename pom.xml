@@ -38,6 +38,15 @@
             <enabled>true</enabled>
         </snapshots>
     </repository>
-    </repositories>
-
+            <repository>
+                <id>Spring Snapshots</id>
+                <name>Spring Snapshot Repository</name>
+                <url>http://repo.spring.io/snapshot</url>
+            </repository>
+            <repository>
+                <id>Spring Milestone</id>
+                <name>Spring Milestone Repository</name>
+                <url>http://repo.spring.io/milestone</url>
+            </repository>
+        </repositories>
 </project>

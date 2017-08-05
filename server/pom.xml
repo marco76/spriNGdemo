@@ -111,6 +111,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-test</artifactId>
         <scope>test</scope>
+        <version>2.0.0.M3</version>
     </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -123,7 +124,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>1.5.4.RELEASE</version>
+                <version>1.5.6.RELEASE</version>
                 <executions>
                     <execution>
                         <goals>
@@ -134,5 +135,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

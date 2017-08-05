@@ -61,7 +61,9 @@
                             <directory>src/dist</directory>
                             <targetPath>META-INF/resources</targetPath>
                         </resource>
-                    </webResources></configuration>
+                    </webResources>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
             </plugin>
         </plugins>
     </build>
