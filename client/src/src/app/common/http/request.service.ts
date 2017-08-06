@@ -25,12 +25,12 @@ export class RequestService implements OnInit {
     return this.http
       .post(this.serverUrl + url, model, options)
       .map((response: Response) => {
-        let responseInfo = new ResponseInfo();
+        const responseInfo = new ResponseInfo();
         responseInfo.status = response.status;
         if (response.text()) {
             responseInfo.text = response.json();
         } else {
-          responseInfo.text = "";
+          responseInfo.text = '';
         }
         responseInfo.error = false;
         return responseInfo;
@@ -52,19 +52,19 @@ export class RequestService implements OnInit {
       );
   }
 
-  sendGet(url:string): Observable<any> {
+  sendGet(url: string): Observable<any> {
 
-    let options = new RequestOptions({ headers: this.headers });
+    const options = new RequestOptions({ headers: this.headers });
 
     return this.http
       .get(this.serverUrl + '/' + url, options)
       .map((response: Response) => {
-        let responseInfo = new ResponseInfo();
+        const responseInfo = new ResponseInfo();
         responseInfo.status = response.status;
         if (response.text()) {
           responseInfo.text = response.json();
         } else {
-          responseInfo.text = "";
+          responseInfo.text = '';
         }
         responseInfo.error = false;
         return responseInfo;
@@ -73,8 +73,8 @@ export class RequestService implements OnInit {
       );
   }
 
-  buildErrorAnswer(error) : ResponseInfo {
-    let responseInfo = new ResponseInfo();
+  buildErrorAnswer(error): ResponseInfo {
+    const responseInfo = new ResponseInfo();
     responseInfo.status = error.status;
     responseInfo.text = error.json();
     responseInfo.error = true;

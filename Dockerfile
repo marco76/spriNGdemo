@@ -18,29 +18,21 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 RUN apt-get install -y nodejs
 
 # clone the repository with the code
-RUN git clone -b stable git://github.com/marco76/java-demo.git
+RUN git clone -b candidate git://github.com/marco76/spriNGdemo.git
 
 # install npm modules
-WORKDIR /usr/src/myapp/java-demo/
+WORKDIR /usr/src/myapp/springNGDemo/
 RUN npm install -g @angular/cli
 RUN mvn generate-resources package
 
-# install WildFly (patched custom version)
-RUN mkdir /opt/wildfly
-WORKDIR /opt/wildfly
-RUN wget https://s3.eu-central-1.amazonaws.com/molteni/java-demo/wildfly-custom/wildfly-11.0.0.Beta1-SNAPSHOT.tar.gz
-#RUN wget https://drive.google.com/uc?id=0B1OW861bv3wvTFBXc2tHd0t4N0E&export=download
-RUN tar xzf ./wildfly-11.0.0.Beta1-SNAPSHOT.tar.gz
+RUN yes | cp -rf /usr/src/myapp/springNGDemo/server/target/server-0.0.1-SNAPSHOT.war /usr/src/myapp
 
-RUN yes | cp -rf /usr/src/myapp/java-demo/server/target/ROOT.war /opt/wildfly/wildfly-11.0.0.Beta1-SNAPSHOT/standalone/deployments/
-
-# This will boot WildFly in the standalone mode and bind to all interfaces
-CMD ["/opt/wildfly/wildfly-11.0.0.Beta1-SNAPSHOT/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0", "-Djboss.http.port=80"]
+CMD ["java", "-jar", "/usr/src/myapp/server-0.0.1-SNAPSHOT.war"]
 
 EXPOSE 80
 ####
 # build with:
-# docker build -t javaee/java-demo .
+# docker build -t javaee/spring-demo .
 #
 # run with:
 # docker run --rm -it -p 80:80  javaee/java-demo

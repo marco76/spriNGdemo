@@ -4,7 +4,7 @@ import {Http, Headers} from '@angular/http';
 @Injectable()
 export class HttpClient implements OnInit{
 
-  _headers : Headers;
+  _headers: Headers;
 
   constructor(private http: Http) {}
 
@@ -13,7 +13,7 @@ export class HttpClient implements OnInit{
       btoa('username:password'));
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this._headers = new Headers({ 'Content-Type': 'application/json' });
     this._headers.append('Accept', 'application/json, text/csv');
     this._headers.append('X-Requested-With', 'XMLHttpRequest');
@@ -25,7 +25,7 @@ export class HttpClient implements OnInit{
 
 
   get(url) {
-    let headers = new Headers();
+    const headers = new Headers();
     this.createAuthorizationHeader(headers);
     return this.http.get(url, {
       headers: headers
@@ -33,7 +33,7 @@ export class HttpClient implements OnInit{
   }
 
   post(url, data) {
-    let headers = new Headers();
+    const headers = new Headers();
     this.createAuthorizationHeader(headers);
     return this.http.post(url, data, {
       headers: headers

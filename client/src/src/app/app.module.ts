@@ -9,7 +9,7 @@ import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
 import { MarkdownModule } from 'angular2-markdown';
 import { FooterComponent} from './common/footer/footer.component';
 
-import { TechnicalInfo } from './common/technical-info/technical-info.component';
+import { TechnicalInfoComponent } from './common/technical-info/technical-info.component';
 import { MaskDirective } from './common/mask/mask-directive';
 import { StaticPageComponent} from './static-page/static-page.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -36,7 +36,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     PrettyJsonPipe,
-     TechnicalInfo,
+     TechnicalInfoComponent,
     MaskDirective,
     StaticPageComponent,
     FooterComponent

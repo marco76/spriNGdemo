@@ -1,7 +1,7 @@
-import ResponseInfo from "../technical-info/ResponseInfo";
+import ResponseInfo from '../technical-info/ResponseInfo';
 export class ResponseHandler {
 
-  _responseInfo : ResponseInfo;
+  _responseInfo: ResponseInfo;
 
   constructor() {
 
