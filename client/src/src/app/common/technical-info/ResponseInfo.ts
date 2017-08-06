@@ -4,9 +4,7 @@ export default class ResponseInfo {
   private _text = '';
   private _error = false;
 
-  constructor() {
-
-  }
+  constructor() {}
 
   get status(): number {
     return this._status;
