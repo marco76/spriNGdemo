@@ -1,6 +1,4 @@
 import io.springdemo.config.CorsConfig;
-import io.springdemo.examples.readdocumentation.ReadDocumentationService;
-import io.springdemo.examples.readdocumentation.ReadDocumentationServiceImpl;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
