@@ -1,5 +1,5 @@
 <td-layout>
-  <td-navigation-drawer flex sidenavTitle="Marco Molteni" logo="assets:teradata" name="Marco Molteni" email="moltenma">
+  <td-navigation-drawer flex sidenavTitle="Marco Molteni" logo="assets:marco" name="Marco Molteni" email="moltenma">
     <md-nav-list>
       <!--
       <a *ngFor="let item of routes" md-list-item><md-icon>{{item.icon}}</md-icon>{{item.title}}</a>
@@ -7,30 +7,46 @@
     </md-nav-list>
     <div td-navigation-drawer-menu>
       <md-nav-list>
-    <!--
-     <a *ngFor="let item of usermenu" md-list-item><md-icon>{{item.icon}}</md-icon>{{item.title}}</a>
-      -->
+        <!--
+         <a *ngFor="let item of usermenu" md-list-item><md-icon>{{item.icon}}</md-icon>{{item.title}}</a>
+          -->
       </md-nav-list>
     </div>
   </td-navigation-drawer>
-  <td-layout-nav >
+  <td-layout-nav>
     <div td-toolbar-content layout="row" layout-align="start center" flex>
       <button md-icon-button td-menu-button tdLayoutToggle>
         <md-icon>menu</md-icon>
       </button>
-      <md-icon [routerLink]="['/']" class="md-icon-logo cursor-pointer" svgIcon="assets:teradata"></md-icon>
-      <span [routerLink]="['/']" class="cursor-pointer">Covalent</span>
+      <md-icon [routerLink]="['/']" class="md-icon-logo cursor-pointer" svgIcon="assets:marco"></md-icon>
+      <span [routerLink]="['/']" class="cursor-pointer">Spring and Angular Demo</span>
       <span flex></span>
-      <a md-icon-button mdTooltip="Docs" href="https://teradata.github.io/covalent/" target="_blank"><md-icon>chrome_reader_mode</md-icon></a>
-      <a md-icon-button mdTooltip="Github" href="https://github.com/teradata/covalent" target="_blank"><md-icon svgIcon="assets:github"></md-icon></a>
+      <a md-icon-button mdTooltip="Docs" href="http://javaee.ch" target="_blank">
+        <md-icon>chrome_reader_mode</md-icon>
+      </a>
+      <a md-icon-button mdTooltip="Github" href="https://github.com/marco76" target="_blank">
+        <md-icon svgIcon="assets:github"></md-icon>
+      </a>
     </div>
+    <md-sidenav-container>
+      <md-sidenav mode="side" opened="true"></md-sidenav>
+      <div class="my-content"><a [routerLink]="['../static-document/home']">Home</a></div>
+      <div class="my-content"><a [routerLink]="['../static-document/font-awesome']">Font Awesome</a></div>
+
+    </md-sidenav-container>
+    <div class="info box" style="min-width: 50%">
+        This project started in August 2017. Come back soon to see how it improved! <i class="fa fa-smile-o" aria-hidden="true"></i>
+    </div>
+
+
 
     <router-outlet></router-outlet>
 
   </td-layout-nav>
   <td-layout-footer>
-    <div layout="row" layout-align="start center">
-      <span class="md-caption">2017 - Marco Molteni</span>
+    <div layout="row" layout-align="center center">
+      <app-footer></app-footer>
     </div>
+
   </td-layout-footer>
 </td-layout>

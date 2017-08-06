@@ -6,28 +6,25 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import {environment} from '../../../environments/environment';
-import ResponseInfo from "../technical-info/ResponseInfo";
+import ResponseInfo from '../technical-info/ResponseInfo';
 import 'rxjs/add/observable/of'
 
 
 @Injectable()
-export class RequestService implements OnInit{
+export class RequestService implements OnInit {
 
-  serverUrl : string = environment.BACKEND_URL;
-  responseOK : {"responseStatus" : "OK"};
+  serverUrl: string = environment.BACKEND_URL;
 
   private headers: Headers;
 
   constructor(private http: Http) { }
 
   sendRequest(url: string, model: any): Observable<any> {
- console.log("sendRequest");
-    let options = new RequestOptions({ headers: this.headers });
+    const options = new RequestOptions({ headers: this.headers });
 
     return this.http
       .post(this.serverUrl + url, model, options)
       .map((response: Response) => {
-      console.log(response);
         let responseInfo = new ResponseInfo();
         responseInfo.status = response.status;
         if (response.text()) {
@@ -49,7 +46,6 @@ export class RequestService implements OnInit{
     return this.http
       .get(this.serverUrl + '/' + url, options)
       .map((response: Response) => {
-         console.log(response);
          return response.text();
       }).catch((error) =>
         Observable.of(this.buildErrorAnswer(error))
@@ -59,9 +55,6 @@ export class RequestService implements OnInit{
   sendGet(url:string): Observable<any> {
 
     let options = new RequestOptions({ headers: this.headers });
-
-    console.log(this.serverUrl + url);
-
 
     return this.http
       .get(this.serverUrl + '/' + url, options)
@@ -81,7 +74,6 @@ export class RequestService implements OnInit{
   }
 
   buildErrorAnswer(error) : ResponseInfo {
-    console.log(error);
     let responseInfo = new ResponseInfo();
     responseInfo.status = error.status;
     responseInfo.text = error.json();

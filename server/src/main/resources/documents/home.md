@@ -34,6 +34,7 @@ The technologies used are the following:
 - Docker (Cloud, Swarm)
 - IntelliJ and VisualStudio Code
 - Swagger
+- Material design
 
 
 ## Why Spring and Angular?
@@ -42,7 +43,7 @@ For an example of Angular with Java EE 8 and Bootstrap you can visit my other de
 
 It would be possible to recreate the same example using Java EE and React using Netbeans? Without doubt the technologies are similar the choice depends on the context of the development.
 
-## A blog is not easier?
+##  Why not blogging it?
 On the long term the content of a blog can be thrown away, it make no sense to update the articles and it’s very hard to maintain the consistency.
 The only advantage of a blog is that is very good for SEO. JS frameworks are not SEO friendly.
 
