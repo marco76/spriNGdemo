@@ -1,5 +1,5 @@
-FROM openjdk:8u102-jdk
-FROM maven:3.3.9-jdk-8
+FROM openjdk:8u141-jdk
+FROM maven:3.5.0-jdk-8
 
 MAINTAINER "Marco Molteni <javaee.ch>"
 
@@ -14,18 +14,21 @@ COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
 
 # install node.js
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+RUN curl -sL curl -sL https://deb.nodesource.com/setup_8.x | bash -
+
+# https://docs.npmjs.com/getting-started/fixing-npm-permissions
 RUN apt-get install -y nodejs
 
 # clone the repository with the code
 RUN git clone -b candidate git://github.com/marco76/spriNGdemo.git
 
 # install npm modules
-WORKDIR /usr/src/myapp/springNGDemo/
+WORKDIR /usr/src/myapp/client/src
 RUN npm install -g @angular/cli
+WORKDIR /usr/src/myapp/
 RUN mvn generate-resources package
 
-RUN yes | cp -rf /usr/src/myapp/springNGDemo/server/target/server-0.0.1-SNAPSHOT.war /usr/src/myapp
+RUN yes | cp -rf /usr/src/myapp/server/target/server-0.0.1-SNAPSHOT.war /usr/src/myapp
 
 CMD ["java", "-jar", "/usr/src/myapp/server-0.0.1-SNAPSHOT.war"]
 
