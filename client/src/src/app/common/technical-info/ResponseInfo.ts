@@ -1,12 +1,10 @@
 export default class ResponseInfo {
 
-  private _status : number = 200;
-  private _text : string = '';
-  private _error : boolean = false;
+  private _status = 200;
+  private _text = '';
+  private _error = false;
 
-  constructor() {
-
-  }
+  constructor() {}
 
   get status(): number {
     return this._status;

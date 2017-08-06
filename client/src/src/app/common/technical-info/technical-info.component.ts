@@ -1,9 +1,9 @@
 import {Component, OnInit, Input} from '@angular/core';
-import { PrettyJsonPipe } from "../pretty-json/prettyJson.pipe";
+import { PrettyJsonPipe } from '../pretty-json/prettyJson.pipe';
 
 import { HighlightJsService } from 'angular2-highlight-js';
-import ResponseInfo from "./ResponseInfo";
-import { isNullOrUndefined } from "util";
+import ResponseInfo from './ResponseInfo';
+import { isNullOrUndefined } from 'util';
 
 @Component({
   selector: 'app-technical-info',
@@ -11,31 +11,31 @@ import { isNullOrUndefined } from "util";
   styleUrls: ['./technical-info.component.css'],
   providers: [PrettyJsonPipe]
 })
-export class TechnicalInfo implements OnInit {
+export class TechnicalInfoComponent implements OnInit {
 
-   _code : string;
-   _response : any;
+   _code: string;
+   _response: any;
    _request: any;
-   _responseInfo : ResponseInfo;
+   _responseInfo: ResponseInfo;
 
   public alerts: any = [];
 
-  isValid : boolean = undefined;
+  isValid: boolean = undefined;
 
-  constructor(private hService: HighlightJsService, private prettyJson : PrettyJsonPipe) {
+  constructor(private hService: HighlightJsService, private prettyJson: PrettyJsonPipe) {
   }
 
   ngOnInit() {
   }
 
   @Input()
-   set response(response : any) {
+   set response(response: any) {
        this._response = this.formatToJson(response);
        this.doOnResponse();
    }
 
   @Input()
-  set responseInfo(responseInfo : ResponseInfo) {
+  set responseInfo(responseInfo: ResponseInfo) {
     if (!responseInfo) {
       return;
     }
@@ -47,12 +47,12 @@ export class TechnicalInfo implements OnInit {
 
 
    @Input()
-   set request(request : any) {
+   set request(request: any) {
     this._request = this.formatToJson(request);
   }
 
   @Input()
-  set code(code : string) {
+  set code(code: string) {
     this._code = code;
   }
 
@@ -60,9 +60,9 @@ export class TechnicalInfo implements OnInit {
 
   get request(): any { return this._request; }
 
-  formatToJson(json : any) : string {
+  formatToJson(json: any): string {
     return  `<pre><code class="json highlight">` +
-            this.prettyJson.transform(json)+ `</code></pre>`;
+            this.prettyJson.transform(json) + `</code></pre>`;
   }
 
   get code(): string { return this._code}

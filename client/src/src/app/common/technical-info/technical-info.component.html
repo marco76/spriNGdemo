@@ -1,7 +1,5 @@
 <div class="col-md-12">
-   <div *ngFor="let alert of alerts">
-    <alert [type]="alert.type" [dismissOnTimeout]="alert.timeout" dismissible="true">{{ alert.msg }}</alert>
-  </div>
+
  <div class="col-md-6">
   <section> <h3>Java code</h3></section>
   <section [innerHTML]="code" highlight-js-content=".highlight"></section>

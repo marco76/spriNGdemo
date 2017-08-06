@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewBox="78 87 577 297" width="577pt" height="297pt" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata> Produced by OmniGraffle 7.4.1 
+    <dc:date>2017-08-05 08:09:51 +0000</dc:date>
+  </metadata>
+  <defs>
+    <font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="500">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue"/>
+      </font-face-src>
+    </font-face>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="black">
+      <g>
+        <path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <font-face font-family="Helvetica Neue" font-size="14" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="500">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1">
+    <title>Canvas 1</title>
+    <rect fill="white" width="576.75" height="297"/>
+    <g>
+      <title>Layer 1</title>
+      <rect x="89.5" y="131.5" width="112" height="93" fill="white"/>
+      <rect x="89.5" y="131.5" width="112" height="93" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <text transform="translate(94.5 168.776)" fill="black">
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="3.576" y="15" textLength="94.848">Development</tspan>
+      </text>
+      <rect x="245.5" y="131.5" width="112" height="93" fill="white"/>
+      <rect x="245.5" y="131.5" width="112" height="93" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <text transform="translate(250.5 159.552)" fill="black">
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="33.072" y="15" textLength="35.856">SCM</tspan>
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="25.664" y="33.448" textLength="50.672">GitHub</tspan>
+      </text>
+      <rect x="418" y="131.5" width="91" height="93" fill="white"/>
+      <rect x="418" y="131.5" width="91" height="93" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <text transform="translate(423 159.552)" fill="black">
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="32.652" y="15" textLength="15.696">CI</tspan>
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="13.228" y="33.448" textLength="54.544">Jenkins</tspan>
+      </text>
+      <rect x="415.75" y="249" width="95.5" height="50" fill="white"/>
+      <rect x="415.75" y="249" width="95.5" height="50" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <text transform="translate(420.75 255.552)" fill="black">
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x=".67" y="15" textLength="69.056">Quality W</tspan>
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="69.134" y="15" textLength="15.696">all</tspan>
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="1.998" y="33.448" textLength="81.504">SonarQube</tspan>
+      </text>
+      <rect x="560" y="131.5" width="91" height="93" fill="white"/>
+      <rect x="560" y="131.5" width="91" height="93" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <text transform="translate(565 159.552)" fill="black">
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="15.46" y="15" textLength="50.08">Deploy</tspan>
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="14.868" y="33.448" textLength="51.264">Docker</tspan>
+      </text>
+      <line x1="202" y1="180" x2="235.602" y2="179.32458" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line x1="357.5" y1="179" x2="408.10044" y2="178.52264" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line x1="509" y1="179" x2="550.1005" y2="178.57409" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <rect x="90.5" y="247" width="111" height="42.5" fill="white"/>
+      <rect x="90.5" y="247" width="111" height="42.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <text transform="translate(95.5 259.026)" fill="black">
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="15.236" y="15" textLength="42.672">Unit T</tspan>
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="56.132" y="15" textLength="29.632">ests</tspan>
+      </text>
+      <rect x="90.5" y="297" width="111" height="42.5" fill="white"/>
+      <rect x="90.5" y="297" width="111" height="42.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <text transform="translate(95.5 299.802)" fill="black">
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="12.276" y="15" textLength="80.896">Integration </tspan>
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="31.98" y="33.448" textLength="9.184">T</tspan>
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="39.388" y="33.448" textLength="29.632">ests</tspan>
+      </text>
+      <rect x="80.75" y="238.5" width="130.5" height="143" stroke="#008f00" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+      <text transform="translate(120.5 352.776)" fill="#008f00">
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#008f00" x=".104" y="15" textLength="49.792">Quality</tspan>
+      </text>
+      <rect x="415.75" y="303" width="95.5" height="42.5" fill="white"/>
+      <rect x="415.75" y="303" width="95.5" height="42.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <text transform="translate(420.75 306.83)" fill="black">
+        <tspan font-family="Helvetica Neue" font-size="14" font-weight="500" x="2.682" y="13" textLength="55.762">Smoke T</tspan>
+        <tspan font-family="Helvetica Neue" font-size="14" font-weight="500" x="56.89" y="13" textLength="25.928">ests</tspan>
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" x="9.702" y="31.392" textLength="66.096">Selenium</tspan>
+      </text>
+      <rect x="398.25" y="238.5" width="130.5" height="143" stroke="#008f00" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+      <text transform="translate(438.5 350.276)" fill="#008f00">
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#008f00" x=".104" y="15" textLength="49.792">Quality</tspan>
+      </text>
+      <rect x="90.5" y="87.5" width="564" height="30" fill="white"/>
+      <rect x="90.5" y="87.5" width="564" height="30" stroke="#ff9300" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <text transform="translate(95.5 93.276)" fill="#ff9300">
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="#ff9300" x="217.28" y="15" textLength="119.44">One click deploy</tspan>
+      </text>
+      <line x1="145.67614" y1="224.5" x2="145.72443" y2="237.25" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line x1="460" y1="225" x2="460.5044" y2="237.25" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

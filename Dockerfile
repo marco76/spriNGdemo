@@ -1,5 +1,5 @@
-FROM openjdk:8u102-jdk
-FROM maven:3.3.9-jdk-8
+FROM openjdk:8u141-jdk
+FROM maven:3.5.0-jdk-8
 
 MAINTAINER "Marco Molteni <javaee.ch>"
 
@@ -14,33 +14,29 @@ COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
 
 # install node.js
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+RUN curl -sL curl -sL https://deb.nodesource.com/setup_8.x | bash -
+
+# https://docs.npmjs.com/getting-started/fixing-npm-permissions
 RUN apt-get install -y nodejs
 
 # clone the repository with the code
-RUN git clone -b stable git://github.com/marco76/java-demo.git
+RUN git clone -b candidate git://github.com/marco76/spriNGdemo.git
 
 # install npm modules
-WORKDIR /usr/src/myapp/java-demo/
-RUN npm install -g @angular/cli
-RUN mvn generate-resources package
+WORKDIR /usr/src/myapp/client/src
+RUN npm install --unsafe-perm --verbose -g @angular/cli
+RUN npm rebuild node-sass --force
+WORKDIR /usr/src/myapp/
+RUN mvn generate-resources install
 
-# install WildFly (patched custom version)
-RUN mkdir /opt/wildfly
-WORKDIR /opt/wildfly
-RUN wget https://s3.eu-central-1.amazonaws.com/molteni/java-demo/wildfly-custom/wildfly-11.0.0.Beta1-SNAPSHOT.tar.gz
-#RUN wget https://drive.google.com/uc?id=0B1OW861bv3wvTFBXc2tHd0t4N0E&export=download
-RUN tar xzf ./wildfly-11.0.0.Beta1-SNAPSHOT.tar.gz
+RUN yes | cp -rf /usr/src/myapp/server/target/server-0.0.2-SNAPSHOT.war /usr/src/myapp
 
-RUN yes | cp -rf /usr/src/myapp/java-demo/server/target/ROOT.war /opt/wildfly/wildfly-11.0.0.Beta1-SNAPSHOT/standalone/deployments/
+CMD ["java", "-jar", "/usr/src/myapp/server-0.0.2-SNAPSHOT.war"]
 
-# This will boot WildFly in the standalone mode and bind to all interfaces
-CMD ["/opt/wildfly/wildfly-11.0.0.Beta1-SNAPSHOT/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0", "-Djboss.http.port=80"]
-
-EXPOSE 80
+EXPOSE 8080
 ####
 # build with:
-# docker build -t javaee/java-demo .
+# docker build -t javaee/spring-demo .
 #
 # run with:
 # docker run --rm -it -p 80:80  javaee/java-demo

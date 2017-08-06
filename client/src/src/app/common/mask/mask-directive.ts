@@ -4,7 +4,7 @@ import {
 } from '@angular/forms';
 
 @Directive({
-  selector: '[mask]',
+  selector: '[appMask]',
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: MaskDirective,
@@ -33,8 +33,8 @@ export class MaskDirective implements ControlValueAccessor{
   @HostListener('keyup', ['$event'])
   onKeyup($event: any) {
     let valor = $event.target.value.replace(/\D/g, '');
-    let pad = this.mask.replace(/\D/g, '').replace(/9/g, '_');
-    let valorMask = valor + pad.substring(0, pad.length - valor.length);
+    const pad = this.mask.replace(/\D/g, '').replace(/9/g, '_');
+    const valorMask = valor + pad.substring(0, pad.length - valor.length);
 
     if ($event.keyCode === 8) {
       this.onChange(valor);
