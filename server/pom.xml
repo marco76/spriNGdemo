@@ -17,7 +17,6 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <demo.version>0.0.2-SNAPSHOT</demo.version>
-
     </properties>
 
     <artifactId>server</artifactId>
@@ -58,24 +57,8 @@
             <artifactId>validation-api</artifactId>
             <version>2.0.0.CR3</version>
         </dependency>
-        <dependency>
-            <groupId>javax.json.bind</groupId>
-            <artifactId>javax.json.bind-api</artifactId>
-            <version>1.0</version>
-        </dependency>
 
         <dependency>
-            <groupId>org.eclipse</groupId>
-            <artifactId>yasson</artifactId>
-            <version>1.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.glassfish</groupId>
-            <artifactId>javax.json</artifactId>
-            <version>1.1</version>
-        </dependency>
-    <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
         <version>4.12</version>
@@ -92,13 +75,6 @@
         <artifactId>h2</artifactId>
         <version>${h2.version}</version>
     </dependency>
-
-        <dependency>
-            <groupId>javax.ws.rs</groupId>
-            <artifactId>javax.ws.rs-api</artifactId>
-            <version>2.0</version>
-        </dependency>
-
 
     <!-- monitoring -->
     <dependency>

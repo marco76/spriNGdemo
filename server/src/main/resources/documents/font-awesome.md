@@ -10,13 +10,14 @@ or add the dependency directly in package.json
 
 ## Add the styles to angular
 In .angular-cli.json add the reference to font awesome in the styles:
-``` json
+
+```json
 "styles": [
 "../node_modules/font-awesome/css/font-awesome.css"
 ```
 
 ## Add the icons to you pages
-``` html
+```html
 <i class="fa fa-twitter fa-2x menu-icon" aria-hidden="true"></i>
 ```
 

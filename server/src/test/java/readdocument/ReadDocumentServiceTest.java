@@ -26,7 +26,6 @@ public class ReadDocumentServiceTest {
         Assert.assertTrue(true);
         String result = readDocumentationService.readClassPathFile("simple.md");
         Assert.assertNotNull(result);
-        System.out.println(result);
         Assert.assertTrue(result.startsWith("###"));
     }
 }
