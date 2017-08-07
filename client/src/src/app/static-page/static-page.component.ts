@@ -20,7 +20,7 @@ export class StaticPageComponent implements OnInit {
     this.route.paramMap.switchMap((params: ParamMap) =>
       this.requestService.getText('rest/document/' + params.get('document')))
       .subscribe(
-      result => { this.markdown = result; console.log(result) },
+      result => { this.markdown = result},
       error => { console.log(error._body) }
     )
   }

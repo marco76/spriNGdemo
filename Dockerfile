@@ -36,7 +36,7 @@ CMD ["java", "-jar", "/usr/src/myapp/server-0.0.2-SNAPSHOT.war"]
 EXPOSE 8080
 ####
 # build with:
-# docker build -t javaee/spring-demo .
+# docker build -t javaee/springdemo .
 #
 # run with:
-# docker run --rm -it -p 80:80  javaee/java-demo
+# docker run --rm -it -p 80:8080  javaee/springdemo

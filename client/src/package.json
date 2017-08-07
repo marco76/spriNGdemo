@@ -28,6 +28,7 @@
     "@covalent/highlight": "^1.0.0-beta.6",
     "@covalent/http": "^1.0.0-beta.6",
     "@covalent/markdown": "^1.0.0-beta.6",
+    "prismjs":"^1.6.0",
     "angular2-highlight-js": "^5.0.2",
     "angular2-markdown": "^1.6.0",
     "bootstrap": "3.3.7",

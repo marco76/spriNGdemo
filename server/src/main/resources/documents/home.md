@@ -14,7 +14,7 @@ Topics are:
 - Delivery
 - Code quality
 
-![alt text](http://localhost:8080/images/architecture.png)
+![alt text](http://molteni.io/images/architecture.png)
 
 
 Central topics are code quality and code delivery.
