@@ -6,6 +6,8 @@ MAINTAINER "Marco Molteni <javaee.ch>"
 # set the path JAVA_HOME for maven
 RUN export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 
+RUN apt-get update
+
 # install git from debian repositories
 RUN apt-get install -y git
 

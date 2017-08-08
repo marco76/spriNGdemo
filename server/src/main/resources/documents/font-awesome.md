@@ -12,7 +12,7 @@ or add the dependency directly in package.json
 In .angular-cli.json add the reference to font awesome in the styles:
 
 ```json
-"styles": [
+"styles" : [
 "../node_modules/font-awesome/css/font-awesome.css"
 ```
 

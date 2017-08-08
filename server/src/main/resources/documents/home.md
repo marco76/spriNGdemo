@@ -21,20 +21,25 @@ Central topics are code quality and code delivery.
 Usually in a project the biggest costs are directly related to the complexity in every phase of the process.
 The complexity becomes high maintenance costs and limited adaptability.
 
-The goal of this example is to reduce the complexity in the lifecycle of software development.
+## Simplicity and Continuous integration
+
+The goal of this example is show a way to reduce the complexity in the lifecycle of software development.
+We will privilege the simplicity over the powerfulness of the components (e.g. docker vs kubernetes, bootstrap vs material design, IntelliJ vs. Eclipse).
+
+The result will be a software development process that will allow to build, validate and deploy the software automatically.
+The can be easily maintained by a small team of developers.
 
 ## Which technologies
 
 The technologies used are the following:
 - Spring Boot 2.0 beta (last available version)
 - Angular 5.0 beta (last available version)
-- Angular Material - Covalence library
-- Jenkins 2.0
-- SonarQube
-- Docker (Cloud, Swarm)
+- Jenkins 2.0 ([Visible here](http://springdemo.io:8081/job/spring-demo-pipeline/))
+- SonarQube ([Visible here](http://springdemo.io:9000/dashboard?id=spring-ng-demo%3Aparent%3Acandidate))
+- Docker Cloud, Swarm, Compose
 - IntelliJ and VisualStudio Code
 - Swagger
-- Material design
+- Bootstrap 4 and PrimeNG
 
 
 ## Why Spring and Angular?
