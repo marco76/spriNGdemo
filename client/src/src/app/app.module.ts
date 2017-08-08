@@ -8,6 +8,8 @@ import { PrettyJsonPipe } from './common/pretty-json/prettyJson.pipe';
 import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
 import { MarkdownModule } from 'angular2-markdown';
 import { FooterComponent} from './common/footer/footer.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {MenuModule, MenuItem} from 'primeng/primeng';
 
 import { TechnicalInfoComponent } from './common/technical-info/technical-info.component';
 import { MaskDirective } from './common/mask/mask-directive';
@@ -19,7 +21,9 @@ import {MdToolbarModule} from '@angular/material';
 import {MdCardModule} from '@angular/material';
 import {MdInputModule} from '@angular/material';
 import { MdIconModule} from '@angular/material';
-import { CovalentLayoutModule, CovalentStepsModule /*, any other modules */ } from '@covalent/core';
+import {
+  CovalentLayoutModule, CovalentStepsModule
+} from '@covalent/core';
 import { CovalentHttpModule } from '@covalent/http';
 import { CovalentHighlightModule } from '@covalent/highlight';
 import { CovalentMarkdownModule } from '@covalent/markdown';
@@ -51,6 +55,8 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MdButtonModule, MdCheckboxModule,
     MdMenuModule,
+    MenuModule,
+    NgbModule.forRoot(),
     MdToolbarModule,
     MdCardModule,
     MdInputModule,

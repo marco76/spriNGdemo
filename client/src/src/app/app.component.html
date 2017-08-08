@@ -1,53 +1,34 @@
-<td-layout>
-  <td-navigation-drawer flex sidenavTitle="Marco Molteni" logo="assets:marco" name="Marco Molteni" email="moltenma">
-    <md-nav-list>
-      <!--
-      <a *ngFor="let item of routes" md-list-item><md-icon>{{item.icon}}</md-icon>{{item.title}}</a>
-   -->
-    </md-nav-list>
-    <div td-navigation-drawer-menu>
-      <md-nav-list>
-        <!--
-         <a *ngFor="let item of usermenu" md-list-item><md-icon>{{item.icon}}</md-icon>{{item.title}}</a>
-          -->
-      </md-nav-list>
-    </div>
-  </td-navigation-drawer>
-  <td-layout-nav>
-    <div td-toolbar-content layout="row" layout-align="start center" flex>
-      <button md-icon-button td-menu-button tdLayoutToggle>
-        <md-icon>menu</md-icon>
-      </button>
-      <md-icon [routerLink]="['/']" class="md-icon-logo cursor-pointer" svgIcon="assets:marco"></md-icon>
-      <span [routerLink]="['/']" class="cursor-pointer">Spring and Angular Demo</span>
-      <span flex></span>
-      <a md-icon-button mdTooltip="Docs" href="http://javaee.ch" target="_blank">
-        <md-icon>chrome_reader_mode</md-icon>
-      </a>
-      <a md-icon-button mdTooltip="Github" href="https://github.com/marco76" target="_blank">
-        <md-icon svgIcon="assets:github"></md-icon>
-      </a>
-    </div>
-    <md-sidenav-container>
-      <md-sidenav mode="side" opened="true"></md-sidenav>
-      <div class="my-content"><a [routerLink]="['../static-document/home']">Home</a></div>
-      <div class="my-content"><a [routerLink]="['../static-document/font-awesome']">Font Awesome</a></div>
-      <div class="my-content"><a [routerLink]="['../static-document/how-the-pages-are-rendered']">How the pages are rendered</a></div>
+<nav class="navbar navbar-light bg-faded rounded navbar-toggleable-md sticky-top" style="margin-bottom: 20px">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Spring Angular Demo</a>
 
-    </md-sidenav-container>
-    <div class="info box" style="min-width: 50%">
-        This project started in August 2017. Come back soon to see how it improved! <i class="fa fa-smile-o" aria-hidden="true"></i>
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container" style="margin-left: 0px; margin-right: 0px">
+  <div class="row">
+  <div class="col-3" style="position: sticky">
+    <p-menu [model]="items"></p-menu>
     </div>
 
+    <div class="col-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 
 
-    <router-outlet></router-outlet>
-
-  </td-layout-nav>
   <td-layout-footer>
+
+
     <div layout="row" layout-align="center center">
       <app-footer></app-footer>
     </div>
 
   </td-layout-footer>
-</td-layout>
+
