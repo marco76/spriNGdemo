@@ -34,8 +34,8 @@ The can be easily maintained by a small team of developers.
 The technologies used are the following:
 - Spring Boot 2.0 beta (last available version)
 - Angular 5.0 beta (last available version)
-- Jenkins 2.0
-- SonarQube
+- Jenkins 2.0 ([Visible here](http://springdemo.io:8081/job/spring-demo-pipeline/))
+- SonarQube ([Visible here](http://springdemo.io:9000/dashboard?id=spring-ng-demo%3Aparent%3Acandidate))
 - Docker Cloud, Swarm, Compose
 - IntelliJ and VisualStudio Code
 - Swagger
