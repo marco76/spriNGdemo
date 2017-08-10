@@ -26,6 +26,13 @@ export class AppComponent implements OnInit {
 
 
       ]},
+
+      {
+        label: 'Documentation',
+        items: [
+          {label: 'Swagger: REST documentation',
+            icon: 'ffa fa fa-book', routerLink: '../static-document/swagger-config'}
+          ]},
       {
         label: 'Development',
         items: []
