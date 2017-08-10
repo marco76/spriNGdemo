@@ -1,6 +1,8 @@
-# How the pages of this demo are rendered
+# How the pages of this demo are built and rendered
 
 Most of the content of this website is written is simple text files using [MarkDown](https://en.wikipedia.org/wiki/Markdown) notation.
+
+You can see the content [here on GitHub](https://github.com/marco76/spriNGdemo/tree/master/server/src/main/resources/documents) and improve them sending pull requests.
 
 With this solution we can store most of the content in the server and we avoid to write the content directly in the typescript classes.
 
@@ -52,7 +54,7 @@ constructor(private requestService: RequestService, private route: ActivatedRout
       error => { console.log(error._body) }
     )
   }
-````
+```
 
 ## Future improvements
 
