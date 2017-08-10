@@ -1,6 +1,6 @@
 # Document the REST resources
 
-To document the REST resources we use [Swagger](https://swagger.io/)
+To document the REST resources we use [Swagger](https://swagger.io/swagger-config.md)
 
 For Spring we can automatically configure our application using [SpringFox](http://springfox.github.io/springfox/)
 
@@ -13,16 +13,16 @@ Here you find the detailled documentation: [https://springfox.github.io/springfo
 We need the following dependencies in our maven project:
 
 ``` xml
- <dependency>
+<dependency>
     <groupId>io.springfox</groupId>
     <artifactId>springfox-swagger2</artifactId>
-        <version>2.7.0</version>
-    </dependency>
-    <dependency>
-        <groupId>io.springfox</groupId>
-        <artifactId>springfox-swagger-ui</artifactId>
-        <version>2.7.0</version>
-    </dependency>
+    <version>2.7.0</version>
+</dependency>
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger-ui</artifactId>
+    <version>2.7.0</version>
+</dependency>
 ```
 
 springfox-swagger-ui allows us to visualize the information in an easy to use graphic interface.
@@ -59,13 +59,15 @@ In our application we comment a REST resource:
 ``` java
 @ApiOperation(value = "Return the MarkDown text for a given filename",
         notes = "The text returned is in MD format.")
-    @RequestMapping(value = "/rest/document/{name}", method = RequestMethod.GET)
-    public ResponseEntity<String> getDocument(@PathVariable String name) {
-        return ResponseEntity.ok(readDocumentationService.readClassPathFile(name + DOCUMENT_SUFFIX));
-    }
+@RequestMapping(value = "/rest/document/{name}", method = RequestMethod.GET)
+public ResponseEntity<String> getDocument(@PathVariable String name) {
+     return ResponseEntity.ok(readDocumentationService.readClassPathFile(name + DOCUMENT_SUFFIX));
+}
 ```
 
+The Swagger UI shows us the information we added to our Java code and allow us to execute requests to our Java backend.
+
+![alt text](http://molteni.io/images/swagger-gui.png)
+
 The Swagger UI shows us the informations we added to our Java code and allow us to execute requests to our Java backend.
-
-
 
