@@ -11,13 +11,15 @@
   </div>
 </nav>
 
-<div class="container" style="margin-left: 0px; margin-right: 0px">
+
+<div class="container-fluid" style="margin-left: 0px; margin-right: 0px">
   <div class="row">
-  <div class="col-3" style="position: sticky">
-    <p-menu [model]="items"></p-menu>
+
+  <div class="col-3 override" style="position: sticky">
+    <p-menu [model]="items" [style]="{'width':'auto'}"></p-menu>
     </div>
 
-    <div class="col-8">
+    <div class="col-9">
       <router-outlet></router-outlet>
     </div>
   </div>
@@ -32,3 +34,4 @@
 
   </td-layout-footer>
 
+</div>
