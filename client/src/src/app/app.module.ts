@@ -10,6 +10,7 @@ import { MarkdownModule } from 'angular2-markdown';
 import { FooterComponent} from './common/footer/footer.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {MenuModule, MenuItem} from 'primeng/primeng';
+import {LeftMenuComponent} from './gui/left-menu/left-menu.component';
 
 import { TechnicalInfoComponent } from './common/technical-info/technical-info.component';
 import { MaskDirective } from './common/mask/mask-directive';
@@ -43,7 +44,8 @@ const routes: Routes = [
      TechnicalInfoComponent,
     MaskDirective,
     StaticPageComponent,
-    FooterComponent
+    FooterComponent,
+    LeftMenuComponent
   ],
   imports: [
     BrowserModule,

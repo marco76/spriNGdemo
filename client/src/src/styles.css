@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~prismjs/themes/prism.css';
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import './styles/prime.css';
 
 .spacer {
   flex: 1 1 auto;
