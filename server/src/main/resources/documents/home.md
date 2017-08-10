@@ -1,7 +1,11 @@
-# Spring Angular One Click Deploy 
-The goal of this website is to collect good practices and code fragment used during the development of projects developed using Spring Boot 2.0 (Java) and Angular (\>=2).
+# Spring, Angular, Cloud : How to build a professional application step by step
+  
+The goal of this website is to collect good practices and code fragments used during the development of projects developed using Spring Boot 2.0 (Java) and Angular (\>=2).
 
-Most of the projects are technically similar and when I change project or client I have to search again the solution for the same problems. StackOverflow and similar are useful but it can take time to find the solution that is good in quality (and not simply a workaround) and works with your libraries.
+It's like a programming books but it's live and it's working.
+
+Most of the projects are technically similar and when I change project or client I have to search again the solution for the same problems.
+StackOverflow and similar are useful but it can take time to find the solution that is good in quality (and not simply a workaround), up-to-date and works with your libraries.
 
 ## Topics and architecture?
 
@@ -12,6 +16,7 @@ Topics are:
 - Coding
 - Deployment
 - Delivery
+- Documentation
 - Code quality
 
 ![alt text](http://molteni.io/images/architecture.png)
@@ -27,15 +32,17 @@ The goal of this example is show a way to reduce the complexity in the lifecycle
 We will privilege the simplicity over the powerfulness of the components (e.g. docker vs kubernetes, bootstrap vs material design, IntelliJ vs. Eclipse).
 
 The result will be a software development process that will allow to build, validate and deploy the software automatically.
-The can be easily maintained by a small team of developers.
+Our goal is an architecture that can be easily by a small team of developers and with a low entry barrier the developers than in the future will take the relay.
 
 ## Which technologies
 
 The technologies used are the following:
+- GitHub ([https://github.com/marco76/spriNGdemo](https://github.com/marco76/spriNGdemo))
 - Spring Boot 2.0 beta (last available version)
 - Angular 5.0 beta (last available version)
 - Jenkins 2.0 ([Visible here](http://springdemo.io:8081/job/spring-demo-pipeline/))
 - SonarQube ([Visible here](http://springdemo.io:9000/dashboard?id=spring-ng-demo%3Aparent%3Acandidate))
+- Docker Hub ([Here][https://hub.docker.com/r/javaee/springdemo/])
 - Docker Cloud, Swarm, Compose
 - IntelliJ and VisualStudio Code
 - Swagger

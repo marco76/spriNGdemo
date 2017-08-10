@@ -28,13 +28,15 @@ RUN rm -f /tmp/apache-maven-3.5.0.tar.gz
 ENV MAVEN_HOME /opt/maven
 
 
-ADD nginx.conf /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/
+RUN mv /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/default.old
+COPY default /etc/nginx/sites-enabled/
 # RUN ufw allow 'Nginx HTTP'
 
-RUN service nginx start
+RUN service nginx restart
 
 # set the path of the working dir
-COPY . /usr/src/myapp
+RUN mkdir /usr/src/myapp
 WORKDIR /usr/src/myapp
 
 # install node.js
@@ -47,15 +49,15 @@ RUN apt-get install -y nodejs
 RUN git clone -b candidate git://github.com/marco76/spriNGdemo.git
 
 # install npm modules
-WORKDIR /usr/src/myapp/client/src
+WORKDIR /usr/src/myapp/spriNGdemo/client/src
 RUN npm install --unsafe-perm -g @angular/cli
 RUN npm rebuild node-sass --force
-WORKDIR /usr/src/myapp/
+WORKDIR /usr/src/myapp/spriNGdemo
 RUN mvn generate-resources install
 
-RUN yes | cp -rf /usr/src/myapp/server/target/server-0.0.2-SNAPSHOT.war /usr/src/myapp
+RUN yes | cp -rf /usr/src/myapp/spriNGdemo/server/target/server-0.0.2-SNAPSHOT.war /usr/src/myapp
 
-CMD ["java", "-jar", "/usr/src/myapp/server-0.0.2-SNAPSHOT.war"]
+CMD ["java", "-jar", "/usr/src/myapp/spriNGdemo/server/target/server-0.0.2-SNAPSHOT.war"]
 
 EXPOSE 80
 ####
