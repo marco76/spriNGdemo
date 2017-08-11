@@ -11,7 +11,7 @@ Spring <--> REST Services <--> Angular (JS Framework)
 
 
 - Spring Boot 2.0 features
-- - Bean Validation 2.0 (alpha)
+- Bean Validation 2.0 (alpha)
 
 ## How to install
 
