@@ -5,7 +5,7 @@
     <parent>
         <artifactId>parent</artifactId>
         <groupId>spring-ng-demo</groupId>
-        <version>0.0.2-SNAPSHOT</version>
+        <version>0.0.3-SNAPSHOT</version>
     </parent>
     <packaging>war</packaging>
     <modelVersion>4.0.0</modelVersion>
@@ -16,7 +16,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml>
-        <demo.version>0.0.2-SNAPSHOT</demo.version>
+        <demo.version>0.0.3-SNAPSHOT</demo.version>
     </properties>
 
     <artifactId>server</artifactId>
@@ -26,7 +26,7 @@
         <dependency>
             <groupId>spring-ng-demo</groupId>
             <artifactId>client</artifactId>
-            <version>0.0.2-SNAPSHOT</version>
+            <version>0.0.3-SNAPSHOT</version>
             <type>war</type>
         </dependency>
     <dependency>

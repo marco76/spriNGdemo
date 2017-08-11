@@ -7,7 +7,7 @@ It's like a programming books but it's live and it's working.
 Most of the projects are technically similar and when I change project or client I have to search again the solution for the same problems.
 StackOverflow and similar are useful but it can take time to find the solution that is good in quality (and not simply a workaround), up-to-date and works with your libraries.
 
-## Topics and architecture?
+## Topics and architecture
 
 Topics are:
 - Development
@@ -46,7 +46,7 @@ The technologies used are the following:
 - Docker Cloud, Swarm, Compose
 - IntelliJ and VisualStudio Code
 - Swagger
-- Bootstrap 4 and PrimeNG
+- Angular Material
 
 
 ## Why Spring and Angular?
