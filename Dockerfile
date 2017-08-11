@@ -12,7 +12,7 @@ RUN apt-get -y install curl openjdk-8-jdk
 RUN apt-get -y update
 
 # install git from debian repositories
-RUN apt-get install -y git  wget
+RUN apt-get install -y git nginx  wget
 
 # get maven 3.2.2
 RUN wget --no-verbose -O /tmp/apache-maven-3.5.0.tar.gz http://archive.apache.org/dist/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz
@@ -27,6 +27,13 @@ RUN ln -s /opt/maven/bin/mvn /usr/local/bin
 RUN rm -f /tmp/apache-maven-3.5.0.tar.gz
 ENV MAVEN_HOME /opt/maven
 
+
+COPY nginx.conf /etc/nginx/
+RUN mv /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/default.old
+COPY default /etc/nginx/sites-enabled/
+# RUN ufw allow 'Nginx HTTP'
+
+RUN service nginx start
 
 # set the path of the working dir
 RUN mkdir /usr/src/myapp
