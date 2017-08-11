@@ -22,13 +22,6 @@ import {MdToolbarModule} from '@angular/material';
 import {MdCardModule} from '@angular/material';
 import {MdInputModule} from '@angular/material';
 import { MdIconModule} from '@angular/material';
-import {
-  CovalentLayoutModule, CovalentStepsModule
-} from '@covalent/core';
-import { CovalentHttpModule } from '@covalent/http';
-import { CovalentHighlightModule } from '@covalent/highlight';
-import { CovalentMarkdownModule } from '@covalent/markdown';
-import { CovalentDynamicFormsModule } from '@covalent/dynamic-forms';
 
 
 const routes: Routes = [
@@ -62,12 +55,6 @@ const routes: Routes = [
     MdToolbarModule,
     MdCardModule,
     MdInputModule,
-    CovalentLayoutModule,
-    CovalentStepsModule,
-    CovalentHttpModule.forRoot(),
-    CovalentHighlightModule,
-    CovalentMarkdownModule,
-    CovalentDynamicFormsModule,
     MdIconModule
   ],
   providers: [HighlightJsService],
