@@ -1,32 +1,30 @@
-<nav class="navbar navbar-light bg-faded rounded navbar-toggleable-md sticky-top" style="margin-bottom: 20px">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="#">Spring Angular Demo</a>
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
-    </ul>
+<div>
+  <md-toolbar color="primary">
+    <span><md-icon>home</md-icon></span>
+    <span>Spring Angular Demo - from the development to the production</span>
+
+    <button md-icon-button [md-menu-trigger-for]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+  </md-toolbar>
+
+  <md-menu x-position="before" #menu="mdMenu">
+
+  </md-menu>
+    <md-sidenav-container class="container">
+      <md-sidenav class="sidenav" #sidenav mode="side" opened="true">
+        <app-lateral-menu></app-lateral-menu>
+       </md-sidenav>
+      <div class="sidenav-content">
+        <md-card>
+          <router-outlet></router-outlet>
+        </md-card>
+      </div>
+
+    </md-sidenav-container>
+
   </div>
-</nav>
-
-<div class="container-fluid" style="margin-left: 0px; margin-right: 0px">
-  <div class="row">
-
-  <div class="col-3 override" style="position: sticky">
-    <p-menu [model]="items" [style]="{'width':'auto'}"></p-menu>
-    </div>
-
-    <div class="col-9">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
 
 
+  <app-footer></app-footer>
 
-
-    <div layout="row" layout-align="center center">
-      <app-footer></app-footer>
-    </div>
-
-
-</div>

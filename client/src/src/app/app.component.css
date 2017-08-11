@@ -1,56 +1,20 @@
-body {
-  padding-bottom: 40px;
-  padding-top: 60px;
-}
-.example-scrolling-content {
-  overflow: auto;
-}
-
-/*
- * Sidebar
- */
-
-.sidebar {
-  position: fixed;
-  top: 51px;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-  padding: 20px;
-  overflow-x: hidden;
-  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-  border-right: 1px solid #eee;
-}
-
-/* Sidebar navigation */
-.sidebar {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.sidebar .nav {
-  margin-bottom: 20px;
-}
-
-.sidebar .nav-item {
+.container {
   width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  align-items: center;
 }
 
-.sidebar .nav-item + .nav-item {
-  margin-left: 0;
+.sidenav-content {
+  display: flex;
+  width: 90%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
-.sidebar .nav-link {
-  border-radius: 0;
-}
-
-ul.ui-menu-child {
-  white-space: nowrap;
-  width: auto !important;
-}
-
-.ui-menu {
-  width: 500px !important;
+.sidenav {
+  padding: 5px;
+  width: 300px;
 }
 
 

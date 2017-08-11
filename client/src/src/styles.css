@@ -1,8 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import '~prismjs/themes/prism.css';
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-@import './styles/prime.css';
 
 .spacer {
   flex: 1 1 auto;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+md-card {
+  max-width: 90%;
+  margin: 1.0em auto;
+}
+
+md-toolbar-row {
+  justify-content: space-between;
+}
+
+/* override the font size of prism */
+pre[class*="language-"] {
+  font-size: small;
 }

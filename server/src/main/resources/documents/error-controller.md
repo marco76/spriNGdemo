@@ -4,7 +4,7 @@ Your Angular application uses routes to show pages, e.g. http://springdemo.io/my
 
 When you click on the refresh button or you call directly the URL from the browser you will receive a 404 error. Using Spring Boot backend the page will show 'Whitelabel error'.
 
-In the past AngularJS used the Hash Style ('#') and you didn't encounter this 404 error. Angular preferred to adopt the HTML5 style getting rid of the hash. In the [official documentation](https://angular.io/guide/router#browser-url-styles>) you find the reasons for this change.
+In the past AngularJS used the Hash Style ('#') and you didn't encounter this 404 error. Angular preferred to adopt the HTML5 style getting rid of the hash. In the [Angular official documentation](https://angular.io/guide/router#browser-url-styles>) you find the reasons for this change.
 
 We could configure Angular to use the Hash Style but we prefer to use the HTML5 style delegating the resolution of the problem to our backend.
 

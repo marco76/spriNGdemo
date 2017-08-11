@@ -8,25 +8,22 @@ import { PrettyJsonPipe } from './common/pretty-json/prettyJson.pipe';
 import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
 import { MarkdownModule } from 'angular2-markdown';
 import { FooterComponent} from './common/footer/footer.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {MenuModule, MenuItem} from 'primeng/primeng';
-import {LeftMenuComponent} from './gui/left-menu/left-menu.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LeftMenuComponent } from './gui/left-menu/left-menu.component';
 import { TechnicalInfoComponent } from './common/technical-info/technical-info.component';
 import { MaskDirective } from './common/mask/mask-directive';
 import { StaticPageComponent} from './static-page/static-page.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MdButtonModule, MdCheckboxModule } from '@angular/material';
-import {MdMenuModule} from '@angular/material';
-import {MdToolbarModule} from '@angular/material';
-import {MdCardModule} from '@angular/material';
-import {MdInputModule} from '@angular/material';
-import { MdIconModule} from '@angular/material';
-
+import { MdMenuModule } from '@angular/material';
+import { MdToolbarModule } from '@angular/material';
+import { MdCardModule } from '@angular/material';
+import { MdInputModule } from '@angular/material';
+import { MdIconModule } from '@angular/material';
+import { MdSidenavModule, MdListModule } from '@angular/material';
 
 const routes: Routes = [
   { path: '', redirectTo: 'static-document/home', pathMatch: 'full' },
-   { path: 'static-document/:document', component: StaticPageComponent }
+  { path: 'static-document/:document', component: StaticPageComponent }
 
 ];
 
@@ -39,6 +36,7 @@ const routes: Routes = [
     StaticPageComponent,
     FooterComponent,
     LeftMenuComponent
+
   ],
   imports: [
     BrowserModule,
@@ -50,12 +48,12 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MdButtonModule, MdCheckboxModule,
     MdMenuModule,
-    MenuModule,
-    NgbModule.forRoot(),
     MdToolbarModule,
     MdCardModule,
     MdInputModule,
-    MdIconModule
+    MdIconModule,
+    MdSidenavModule,
+    MdListModule
   ],
   providers: [HighlightJsService],
   bootstrap: [AppComponent]
