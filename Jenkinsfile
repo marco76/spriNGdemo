@@ -1,6 +1,6 @@
 node {
 
-    stage ('build') {
+  stage ('Build') {
   git branch: 'candidate', url: 'https://github.com/marco76/spriNGdemo.git';
   sh 'mvn clean install';
   archiveArtifacts 'server/target/*.war';
@@ -15,5 +15,4 @@ stage('SonarQube analysis') {
     sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
     }
   }
-
 }

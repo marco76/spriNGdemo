@@ -4,7 +4,7 @@
 
 The Single Page Applications based on JavaScript frameworks
 tend to have a big size, they reach easily 2-3 MB for simple
-applications. More libraires you use more code you are sending to
+applications. More libraries you use more code you are sending to
 the web client.
 
 This is not a big issue during the development but your remote
