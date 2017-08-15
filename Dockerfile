@@ -44,9 +44,9 @@ RUN npm rebuild node-sass --force
 WORKDIR /usr/src/myapp/spriNGdemo
 RUN mvn generate-resources install
 
-RUN yes | cp -rf /usr/src/myapp/spriNGdemo/server/target/server-0.0.3-SNAPSHOT.war /usr/src/myapp
+RUN yes | cp -rf /usr/src/myapp/spriNGdemo/server/target/server-0.0.4-SNAPSHOT.war /usr/src/myapp
 
-CMD ["java", "-jar", "/usr/src/myapp/spriNGdemo/server/target/server-0.0.3-SNAPSHOT.war"]
+CMD ["java", "-jar", "/usr/src/myapp/spriNGdemo/server/target/server-0.0.4-SNAPSHOT.war"]
 
 ####
 # build with:
