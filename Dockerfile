@@ -35,7 +35,7 @@ RUN curl -sL curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
 
 # clone the repository with the code
-RUN git clone -b candidate git://github.com/marco76/spriNGdemo.git
+RUN git clone -b master git://github.com/marco76/spriNGdemo.git
 
 # install npm modules
 WORKDIR /usr/src/myapp/spriNGdemo/client/src
@@ -46,7 +46,7 @@ RUN mvn generate-resources install
 
 RUN yes | cp -rf /usr/src/myapp/spriNGdemo/server/target/server-0.0.4-SNAPSHOT.war /usr/src/myapp
 
-CMD ["java", "-jar", "/usr/src/myapp/spriNGdemo/server/target/server-0.0.4-SNAPSHOT.war"]
+CMD ["java", "-jar", "/usr/src/myapp/server-0.0.4-SNAPSHOT.war"]
 
 ####
 # build with:
