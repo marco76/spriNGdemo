@@ -11,7 +11,6 @@ import { FooterComponent} from './common/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LeftMenuComponent } from './gui/left-menu/left-menu.component';
 import { TechnicalInfoComponent } from './common/technical-info/technical-info.component';
-import { MaskDirective } from './common/mask/mask-directive';
 import { StaticPageComponent} from './static-page/static-page.component';
 import { MdButtonModule, MdCheckboxModule } from '@angular/material';
 import { MdMenuModule } from '@angular/material';
@@ -32,7 +31,6 @@ const routes: Routes = [
     AppComponent,
     PrettyJsonPipe,
      TechnicalInfoComponent,
-    MaskDirective,
     StaticPageComponent,
     FooterComponent,
     LeftMenuComponent

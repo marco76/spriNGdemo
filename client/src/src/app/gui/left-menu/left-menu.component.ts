@@ -46,7 +46,9 @@ export class LeftMenuComponent {
       label: 'Build',
       items: [
         {label: 'Jenkins: installation',
-          icon: 'ffa fa fa-book', routerLink: '../static-document/jenkins-install'}
+          icon: 'ffa fa fa-book', routerLink: '../static-document/jenkins-install'},
+        {label: 'Jenkins: GitHub -> Cloud',
+          icon: 'ffa fa fa-book', routerLink: '../static-document/jenkins-pipeline'}
       ]},
     {
       label: 'Quality',
