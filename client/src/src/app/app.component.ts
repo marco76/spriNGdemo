@@ -8,8 +8,8 @@ import {MdSidenav} from '@angular/material';
 })
 export class AppComponent implements OnInit {
 
-  private bigScreen: boolean;
-  private openedSidenav: boolean;
+  public bigScreen: boolean;
+  public openedSidenav: boolean;
 
   @Output() toggleSidenav = new EventEmitter();
   @ViewChild('sidenav') sidenav: MdSidenav;
