@@ -15,6 +15,9 @@
 .sidenav {
   padding: 5px;
   width: 300px;
+  display: flex;
+  z-index: 1;
+  box-shadow: 3px 0 6px rgba(0,0,0,.24);
 }
 
 

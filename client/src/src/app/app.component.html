@@ -1,18 +1,18 @@
 <div>
   <md-toolbar color="primary">
-    <span><md-icon>home</md-icon></span>
+    <button md-icon-button (click)="openedSidenav=!openedSidenav" *ngIf="!bigScreen">
+      <md-icon class="material-icons">menu</md-icon>
+    </button>
+
     <span>Spring Angular Demo - from the development to the production</span>
 
-    <button md-icon-button [md-menu-trigger-for]="menu">
-      <md-icon>more_vert</md-icon>
-    </button>
   </md-toolbar>
 
   <md-menu x-position="before" #menu="mdMenu">
 
   </md-menu>
     <md-sidenav-container class="container">
-      <md-sidenav class="sidenav" #sidenav mode="side" opened="true">
+      <md-sidenav  disableClose="false" class="sidenav" #sidenav [opened]="openedSidenav" [mode]="bigScreen ? 'side' : 'side'">
         <app-lateral-menu></app-lateral-menu>
        </md-sidenav>
       <div class="sidenav-content">
