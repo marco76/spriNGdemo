@@ -19,7 +19,7 @@ export class LeftMenuComponent {
       {label: 'Compression',
         icon: 'ffa fa-cog', routerLink: '../static-document/config-compression'},
 
-      {label: 'Whitelabel (404) error, PathLocationStrategy',
+      {label: 'Whitelabel (404) error',
         icon: 'ffa fa-cog', routerLink: '../static-document/error-controller'},
       {label: 'CORS ',
         icon: 'ffa fa-cog', routerLink: '../static-document/cors-config'}
