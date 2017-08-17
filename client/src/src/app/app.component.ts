@@ -11,8 +11,6 @@ export class AppComponent implements OnInit {
   public bigScreen: boolean;
   public openedSidenav: boolean;
 
-  @Output() toggleSidenav = new EventEmitter();
-  @ViewChild('sidenav') sidenav: MdSidenav;
   @HostListener('window:resize', ['$event'])
     onResize(event) {
        this.configureSideNav()
@@ -25,5 +23,11 @@ export class AppComponent implements OnInit {
   configureSideNav() {
     this.bigScreen = window.innerWidth > 800;
     this.openedSidenav = this.bigScreen;
+  }
+
+  onRouteClicked(route: String) {
+    if (!this.bigScreen) {
+      this.openedSidenav = false;
+    }
   }
 }

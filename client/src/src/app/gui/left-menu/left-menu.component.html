@@ -9,8 +9,7 @@
     <div *ngFor="let item of category.items">
       <md-list-item>
         <span md-list-icon><i class="fa fa-file-text-o" aria-hidden="true"></i></span>
-
-        <p md-line><a [routerLink]=item.routerLink class="article">{{item.label}}</a> </p>
+        <p md-line><a (click)="routeTo(item.routerLink)">{{item.label}}</a> </p>
       </md-list-item>
      </div>
     <md-divider></md-divider>
