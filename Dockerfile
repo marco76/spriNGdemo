@@ -43,6 +43,7 @@ RUN npm install --unsafe-perm -g @angular/cli
 RUN npm rebuild node-sass --force
 WORKDIR /usr/src/myapp/spriNGdemo
 RUN mvn generate-resources install
+RUN chmod 777 /tmp
 
 RUN yes | cp -rf /usr/src/myapp/spriNGdemo/server/target/server-0.0.4-SNAPSHOT.war /usr/src/myapp
 
