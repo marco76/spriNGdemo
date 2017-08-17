@@ -4,7 +4,7 @@
       <md-icon class="material-icons">menu</md-icon>
     </button>
 
-    <span>Spring Angular Demo - from the development to the production</span>
+    <span>Spring Angular Demo <span *ngIf="bigScreen"> - from the development to the production</span></span>
 
   </md-toolbar>
 
@@ -12,8 +12,8 @@
 
   </md-menu>
     <md-sidenav-container class="container">
-      <md-sidenav  disableClose="false" class="sidenav" #sidenav [opened]="openedSidenav" [mode]="bigScreen ? 'side' : 'side'">
-        <app-lateral-menu></app-lateral-menu>
+      <md-sidenav disableClose="false" class="sidenav" #sidenav [opened]="openedSidenav" [mode]="bigScreen ? 'side' : 'side'">
+        <app-lateral-menu (onRouteClicked)="onRouteClicked($event)"></app-lateral-menu>
        </md-sidenav>
       <div class="sidenav-content">
         <md-card>
@@ -22,9 +22,6 @@
       </div>
 
     </md-sidenav-container>
-
   </div>
-
-
   <app-footer></app-footer>
 

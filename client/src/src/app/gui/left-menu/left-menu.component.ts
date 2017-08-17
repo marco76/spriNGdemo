@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lateral-menu',
@@ -24,7 +25,7 @@ export class LeftMenuComponent {
       {label: 'CORS ',
         icon: 'ffa fa-cog', routerLink: '../static-document/cors-config'}
 
-        ]},
+    ]},
     {
       label: 'Documentation',
       items: [
@@ -39,6 +40,7 @@ export class LeftMenuComponent {
     {
       label: 'Angular Dev',
       items: [
+        {label: 'Angular Material', icon: 'fa-font-awesome', routerLink: '../static-document/md-material'},
         {label: 'Import Font Awesome', icon: 'fa-font-awesome', routerLink: '../static-document/font-awesome'}
       ]
     },
@@ -67,5 +69,16 @@ export class LeftMenuComponent {
           icon: 'ffa fa fa-book', routerLink: '../static-document/docker-cheatsheet'}
       ]
     }
-  ]
+  ];
+
+  // the event is emitted and set to the parent
+  @Output() onRouteClicked = new EventEmitter<String>();
+
+  constructor(private router: Router) {}
+
+  routeTo(routerLink: String) {
+
+    this.onRouteClicked.emit(routerLink);
+    this.router.navigate([routerLink]);
+  }
 }

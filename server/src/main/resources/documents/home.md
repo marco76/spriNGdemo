@@ -62,9 +62,9 @@ The technologies used are the following:
 Simply because at the moment these are the 2 technologies that I use more often where I work and they are currently on demand.
 The goal of this website is to be useful to real projects.
 
-If you prefer Java EE as backend I created an example of Angular with Java EE 8 and Bootstrap that you can visit here: [javademo.io](http://javademo.io "javademo.io").
+Java EE is a great technology too. I created an example of integration of Angular with Java EE 8 and Bootstrap that you can visit here: [javademo.io](http://javademo.io "javademo.io").
 
-## Why not simply blogging?
+## A blog is not enough??
 
 On the long term the content of a blog can be thrown away, it make no sense to update the articles and it’s very hard to maintain the consistency.
 The only advantage of a blog is that is very good for SEO. JS frameworks are not SEO friendly.
