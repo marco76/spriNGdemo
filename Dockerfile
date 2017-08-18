@@ -2,14 +2,9 @@ FROM openjdk:8-jdk-alpine
 
 MAINTAINER "Marco Molteni <moltenma@gmail.com>"
 
-# set the path of the working dir
+ADD server/target/server-0.0.4-SNAPSHOT.war /usr/src/myapp/myApp.war
 
-WORKDIR /usr/src/myapp
-
-RUN chmod 777 /tmp
-ADD server/target/server-0.0.4-SNAPSHOT.war /opt/myapp
-
-CMD ["java", "-jar", "/usr/src/myapp/server-0.0.4-SNAPSHOT.war"]
+CMD ["java", "-jar", "/usr/src/myapp/myApp.war"]
 
 ####
 # build with:

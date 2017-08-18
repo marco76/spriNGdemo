@@ -19,8 +19,6 @@ FROM openjdk:8-jdk-alpine
 
 MAINTAINER "Marco Molteni <moltenma@gmail.com>"
 
-WORKDIR /usr/src/myapp
-
 ADD server/target/server-0.0.4-SNAPSHOT.war /usr/src/myapp/myApp.war
 
 CMD ["java", "-jar", "/usr/src/myapp/myApp.war"]
@@ -35,6 +33,8 @@ The _CMD_ instructions will be executed only when the docker image will be insta
 
 An alternative to the previous 'light' deploy is to create a docker image that build the application from the code source in an empty environment.
 This solution is good to verify that our application can be built from scratch without any potential dependency issue (cache, library version etc) with our Jenkins environment.
+
+The full build is maybe the only option you don't use Jenkis but you build the image directly in Docker Cloud or AWS.
 
 Here an example that contains the full process of building and deploying the application starting from an empty OS and the GitHub sources:
 You can find this file on GitHub (documents/dockerfile-full-process)
