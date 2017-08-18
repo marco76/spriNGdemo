@@ -4,7 +4,6 @@
 }
 
 .article {
-  font-size: 14px;
   padding: 0 5px;
   color: rgba(0,0,0,.54);
 
@@ -17,7 +16,12 @@ a:hover {
   cursor: pointer;
 }
 
+.list-text-title {
+  font-size: 14px;
+  color: black;
+}
+
 .list-text-description {
   font-size: smaller;
-  color: dimgrey;
+  color: gray;
 }

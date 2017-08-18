@@ -1,3 +1,5 @@
+### This dockerfile contains the complete process of downloading / building / executing the application
+
 FROM ubuntu:17.04
 
 MAINTAINER "Marco Molteni <moltenma@gmail.com>"

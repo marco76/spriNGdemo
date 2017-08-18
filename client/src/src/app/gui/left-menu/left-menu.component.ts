@@ -54,7 +54,10 @@ export class LeftMenuComponent {
     {
       label: 'Angular Dev',
       items: [
-        {label: 'Angular Material', description: 'introduction', icon: 'fa fa-font-awesome', routerLink: '../static-document/md-material'},
+        {label: 'Angular Material',
+          description: 'introduction to MD', icon: 'fa fa-font-awesome', routerLink: '../static-document/md-material'},
+        {label: 'Typography',
+          description: 'improve the readability of your app', icon: 'fa fa-font-awesome', routerLink: '../static-document/font-google'},
         {label: 'Font Awesome', icon: 'fa fa-font-awesome', routerLink: '../static-document/font-awesome'}
       ]
     },
@@ -64,7 +67,10 @@ export class LeftMenuComponent {
         {label: 'Jenkins: installation',
           icon: 'fa fa-cog', routerLink: '../static-document/jenkins-install'},
         {label: 'Jenkins: GitHub -> Cloud',
-          icon: 'fa fa-cog', routerLink: '../static-document/jenkins-pipeline'}
+          icon: 'fa fa-cog', routerLink: '../static-document/jenkins-pipeline'},
+       {label: 'Jenkins -> Docker',
+         description: 'create a docker image with your jar/war',
+          icon: 'fa fa-cog', routerLink: '../static-document/jenkins-pipeline-docker'}
       ]},
     {
       label: 'Quality',
