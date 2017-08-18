@@ -7,5 +7,5 @@ export const environment = {
   production: false,
   BACKEND_URL: window.location.protocol + '//' + window.location.hostname + ':' + 8080,
   WS_BACKEND_URL: 'ws://' + window.location.hostname + ':' + 8080,
-
+  DOCUMENT_VALUES: {'BACKEND_URL': window.location.protocol + '//' + window.location.hostname + ':' + 8080}
 };

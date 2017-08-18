@@ -19,12 +19,13 @@ import { MdCardModule } from '@angular/material';
 import { MdInputModule } from '@angular/material';
 import { MdIconModule } from '@angular/material';
 import { MdSidenavModule, MdListModule } from '@angular/material';
+import { CovalentLayoutModule, CovalentStepsModule /*, any other modules */ } from '@covalent/core';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'static-document/home', pathMatch: 'full' },
   { path: 'static-document/:document', component: StaticPageComponent }
-
-];
+  ];
 
 @NgModule({
   declarations: [
@@ -51,7 +52,9 @@ const routes: Routes = [
     MdInputModule,
     MdIconModule,
     MdSidenavModule,
-    MdListModule
+    MdListModule,
+    CovalentLayoutModule,
+    CovalentStepsModule
   ],
   providers: [HighlightJsService],
   bootstrap: [AppComponent]

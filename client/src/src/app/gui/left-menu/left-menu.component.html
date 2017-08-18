@@ -1,19 +1,16 @@
-<md-list>
-
+<md-nav-list dense flex>
   <div *ngFor="let category of list">
     <md-list-item>
-
         <h3 md-subheader>{{category.label}}</h3>
     </md-list-item>
 
     <div *ngFor="let item of category.items">
-      <md-list-item>
-        <span md-list-icon><i class="fa fa-file-text-o" aria-hidden="true"></i></span>
-        <p md-line><a (click)="routeTo(item.routerLink)">{{item.label}}</a> </p>
-      </md-list-item>
+      <a md-list-item (click)="routeTo(item.routerLink)">
+        <span md-list-icon><i [ngClass]="!item.icon ? 'fa fa-file-text-o' : item.icon" aria-hidden="true"></i></span>
+        <h3 md-line><a >{{item.label}}</a> </h3>
+        <p md-line class="list-text-description">{{item.description}}</p>
+      </a>
      </div>
     <md-divider></md-divider>
   </div>
-
-
-</md-list>
+</md-nav-list>
