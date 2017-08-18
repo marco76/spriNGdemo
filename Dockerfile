@@ -11,7 +11,7 @@ RUN mkdir /opt/myapp
 WORKDIR /opt/myapp
 
 RUN chmod 777 /tmp
-ADD var/lib/jenkins/workspace/spring-demo-pipeline/server/target/server-0.0.4-SNAPSHOT.war /opt/myapp
+ADD server/target/server-0.0.4-SNAPSHOT.war /opt/myapp
 
 CMD ["java", "-jar", "/opt/myapp/server-0.0.4-SNAPSHOT.war"]
 
