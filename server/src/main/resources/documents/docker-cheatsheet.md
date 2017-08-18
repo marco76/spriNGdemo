@@ -34,6 +34,7 @@ Stop all the container
 
 
 Delete all the containers
+
 ```docker rm $(docker ps -a -q)```
 
 Delete all the images

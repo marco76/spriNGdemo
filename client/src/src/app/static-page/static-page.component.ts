@@ -13,8 +13,7 @@ import {environment} from '../../environments/environment';
 })
 export class StaticPageComponent implements OnInit {
 
- private document: string;
- markdown = '';
+  markdown = '';
 
  constructor(private requestService: RequestService, private route: ActivatedRoute) {}
 
@@ -22,12 +21,15 @@ export class StaticPageComponent implements OnInit {
     this.route.paramMap.switchMap((params: ParamMap) =>
       this.requestService.getText('rest/document/' + params.get('document')))
       .subscribe(
-      result => { this.markdown = this.setVariables(result)},
+      result => {this.markdown = this.setVariables(result)},
       error => { console.log(error._body) }
     )
   }
 
   setVariables (markdown: string) {
+   if (!markdown) {
+     return '';
+   }
    while (markdown.indexOf('[p]') > 0) {
      const tag = markdown.match('\\[p](.*)\\[\\/p]');
      if (tag) {
