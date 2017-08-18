@@ -31,4 +31,4 @@ Spring cleverly hides some sensitive fields like `password` automatically and it
 
 You can see some examples of the result:
 
-![alt text](./images/actuator_1.png)
+![alt text]([p]BACKEND_URL[/p]/images/actuator_1.png)

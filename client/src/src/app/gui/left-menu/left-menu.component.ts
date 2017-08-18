@@ -10,26 +10,40 @@ export class LeftMenuComponent {
 
   list = [{
     label: 'Architecture',
-    items: [ {label: 'Main', icon: 'fa-home', routerLink: '../static-document/home'},
-      {label: 'Checklist, what is really needed?', icon: 'fa-file-text-o', routerLink: '../static-document/app-checklist'},
+    items: [ {label: 'Main',
+              icon: 'fa fa-home',
+              description: 'Homepage',
+              routerLink: '../static-document/home'},
+      {label: 'Checklist',
+        description: 'what it is really needed?',
+        icon: 'fa fa-file-text-o', routerLink: '../static-document/app-checklist'},
 
-      {label: 'MarkDown for this site', icon: 'fa-file-text-o', routerLink: '../static-document/how-the-pages-are-rendered'}
+      {label: 'How this site works',
+        description: 'Static content with MarkDown',
+
+        icon: 'fa fa-file-text-o', routerLink: '../static-document/how-the-pages-are-rendered'}
     ]}, {
     label: 'Configuration',
     items: [
       {label: 'Compression',
-        icon: 'ffa fa-cog', routerLink: '../static-document/config-compression'},
+        description: 'Better performance with smaller files',
+
+        icon: 'fa fa-cog', routerLink: '../static-document/config-compression'},
 
       {label: 'Whitelabel (404) error',
-        icon: 'ffa fa-cog', routerLink: '../static-document/error-controller'},
+        description: 'PathLocationStrategy',
+
+      routerLink: '../static-document/error-controller'},
       {label: 'CORS ',
-        icon: 'ffa fa-cog', routerLink: '../static-document/cors-config'}
+        description: 'Cross-Origin Resource Sharing',
+     routerLink: '../static-document/cors-config'}
 
     ]},
     {
       label: 'Documentation',
       items: [
-        {label: 'Swagger: REST documentation',
+        {label: 'Swagger',
+          description: 'REST documentation',
           icon: 'ffa fa fa-book', routerLink: '../static-document/swagger-config'}
       ]},
     {
@@ -40,17 +54,17 @@ export class LeftMenuComponent {
     {
       label: 'Angular Dev',
       items: [
-        {label: 'Angular Material', icon: 'fa-font-awesome', routerLink: '../static-document/md-material'},
-        {label: 'Import Font Awesome', icon: 'fa-font-awesome', routerLink: '../static-document/font-awesome'}
+        {label: 'Angular Material', description: 'introduction', icon: 'fa fa-font-awesome', routerLink: '../static-document/md-material'},
+        {label: 'Font Awesome', icon: 'fa fa-font-awesome', routerLink: '../static-document/font-awesome'}
       ]
     },
     {
       label: 'Build',
       items: [
         {label: 'Jenkins: installation',
-          icon: 'ffa fa fa-book', routerLink: '../static-document/jenkins-install'},
+          icon: 'fa fa-cog', routerLink: '../static-document/jenkins-install'},
         {label: 'Jenkins: GitHub -> Cloud',
-          icon: 'ffa fa fa-book', routerLink: '../static-document/jenkins-pipeline'}
+          icon: 'fa fa-cog', routerLink: '../static-document/jenkins-pipeline'}
       ]},
     {
       label: 'Quality',
@@ -59,14 +73,14 @@ export class LeftMenuComponent {
       label: 'Monitoring',
       items: [
         {label: 'Actuator: is your app still up?',
-          icon: 'ffa fa fa-book', routerLink: '../static-document/actuator-monitoring'}
+          icon: '', routerLink: '../static-document/actuator-monitoring'}
       ]
     },
     {
       label: 'Cheat Sheet',
       items: [
         {label: 'Docker',
-          icon: 'ffa fa fa-book', routerLink: '../static-document/docker-cheatsheet'}
+          icon: '', routerLink: '../static-document/docker-cheatsheet'}
       ]
     }
   ];

@@ -16,3 +16,8 @@ a:hover {
   color: blue;
   cursor: pointer;
 }
+
+.list-text-description {
+  font-size: smaller;
+  color: dimgrey;
+}
