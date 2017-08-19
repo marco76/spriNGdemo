@@ -1,10 +1,12 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import {Component, OnInit, EventEmitter, Output, ViewEncapsulation} from '@angular/core';
 import { Router } from '@angular/router';
+import {MdSlideToggleChange} from '@angular/material';
 
 @Component({
   selector: 'app-lateral-menu',
   templateUrl: './left-menu.component.html',
-  styleUrls: ['./left-menu.component.css']
+  styleUrls: ['./left-menu.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class LeftMenuComponent {
 
@@ -101,6 +103,8 @@ export class LeftMenuComponent {
 
   // the event is emitted and set to the parent
   @Output() onRouteClicked = new EventEmitter<String>();
+  showAll = true;
+
 
   constructor(private router: Router) {}
 
@@ -108,5 +112,14 @@ export class LeftMenuComponent {
 
     this.onRouteClicked.emit(routerLink);
     this.router.navigate([routerLink]);
+  }
+
+  onChange(event: MdSlideToggleChange) {
+
+    if (event.checked === true) {
+      this.showAll = true;
+    } else {
+      this.showAll = false;
+    }
   }
 }

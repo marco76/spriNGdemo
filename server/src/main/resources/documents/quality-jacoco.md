@@ -1,5 +1,7 @@
 # Setup for the coverage analysis
 
+![alt text]([p]BACKEND_URL[/p]/images/sonar-coverage-detail-class.png)
+
 Is the test coverage useful? Yes!
 
 It can be used to evaluate the quality? **False!!!**
@@ -13,6 +15,7 @@ Here a couple of quotes from Martin Fowler, you can find his interesting article
 > _I would say you are doing enough testing if the following is true:_
 >
 > _-You rarely get bugs that escape into production, and_
+>
 > _-You are rarely hesitant to change some code for fear it will cause production bugs._
 
 Here a couple of quotes from [yegor256](http://www.yegor256.com/2015/06/08/deadly-sins-software-project.html)
@@ -38,6 +41,21 @@ The frontend usually change at a lightning fast speed and has to be updated with
 The costs of a frontend error (representation) is not high as an error in the backend (data and business) but the cost to create the frontend tests can be a lot higher than the costs for the backend, in particular during a fullstack development.
 
 The unit tests are more important, my opinion, in the backend. For the frontend are to prioritize other type of tests (we will see this with Selenium).
+
+## SonarQube coverage
+
+After the execution of the tests and the coverage analysis we can access to Sonar directly from Jenkins:
+
+![alt text]([p]BACKEND_URL[/p]/images/sonar_coverage_jenkins.png)
+
+In SonarQube we can see the global coverage ...
+
+![alt text]([p]BACKEND_URL[/p]/images/sonar-coverage-percent.png)
+
+... and the details
+
+![alt text]([p]BACKEND_URL[/p]/images/sonar-coverage-detail.png)
+ 
 
 ## Setup JaCoCo for Jenkins and SonarQube
 
@@ -114,5 +132,5 @@ In the profile section of your maven project (backend) you have to add the follo
             <scope>test</scope>
         </dependency>
     </dependencies>
-</profile>
+    </profile>
 ```

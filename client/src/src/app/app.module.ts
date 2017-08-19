@@ -19,7 +19,8 @@ import { MdCardModule } from '@angular/material';
 import { MdInputModule } from '@angular/material';
 import { MdIconModule } from '@angular/material';
 import { MdSidenavModule, MdListModule } from '@angular/material';
-import { CovalentLayoutModule, CovalentStepsModule /*, any other modules */ } from '@covalent/core';
+import { MdExpansionModule} from '@angular/material';
+import { MdSlideToggleModule} from '@angular/material';
 
 
 const routes: Routes = [
@@ -53,8 +54,8 @@ const routes: Routes = [
     MdIconModule,
     MdSidenavModule,
     MdListModule,
-    CovalentLayoutModule,
-    CovalentStepsModule
+    MdExpansionModule,
+    MdSlideToggleModule
   ],
   providers: [HighlightJsService],
   bootstrap: [AppComponent]
