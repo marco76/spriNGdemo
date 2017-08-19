@@ -2,6 +2,7 @@
 
 In the general overview of our Jenkins Pipeline we saw that Jenkins build the docker image that will be delivered to the cloud.
 
+![alt text]([p]BACKEND_URL[/p]/images/jenkins-docker.png)
 
 ## Include your artifact in the docker image
 

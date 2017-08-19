@@ -17,7 +17,8 @@ Here the list according to their priorities:
 - [ ] _HTTP Compression_: Greatly improve the performances of your website
 - [ ] _Jenkins_: It can build and deploy your applications with ease
 - [ ] _SonarCube_: It monitors the 'quality' of the code according to your company standards
-_ [ ] _Style_: Define your style and typography
+- [ ] _Style_: Define your style and typography
+- [ ] _Page navigation_: check that the viewport is correct during the navigation
 
 ## Nice to have
 
