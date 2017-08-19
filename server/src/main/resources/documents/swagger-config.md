@@ -2,6 +2,8 @@
 
 To document the REST resources we use [Swagger](https://swagger.io/swagger-config.md)
 
+![alt text]([p]BACKEND_URL[/p]/images/swagger_main.png)
+
 For Spring we can automatically configure our application using [SpringFox](http://springfox.github.io/springfox/)
 
 Here you find the detailled documentation: [https://springfox.github.io/springfox/docs/current/](https://springfox.github.io/springfox/docs/current/)

@@ -31,7 +31,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     PrettyJsonPipe,
-     TechnicalInfoComponent,
+    TechnicalInfoComponent,
     StaticPageComponent,
     FooterComponent,
     LeftMenuComponent

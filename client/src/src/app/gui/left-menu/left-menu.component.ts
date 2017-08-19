@@ -23,7 +23,7 @@ export class LeftMenuComponent {
 
         icon: 'fa fa-file-text-o', routerLink: '../static-document/how-the-pages-are-rendered'}
     ]}, {
-    label: 'Configuration',
+    label: 'Spring Configuration',
     items: [
       {label: 'Compression',
         description: 'Better performance with smaller files',
@@ -40,20 +40,16 @@ export class LeftMenuComponent {
 
     ]},
     {
-      label: 'Documentation',
-      items: [
-        {label: 'Swagger',
-          description: 'REST documentation',
-          icon: 'ffa fa fa-book', routerLink: '../static-document/swagger-config'}
-      ]},
-    {
       label: 'Spring Dev',
       items: []
     },
 
+
     {
       label: 'Angular Dev',
       items: [
+        {label: 'Route to the top of the page',
+          description: 'fix the ng navigation issue ', icon: 'fa fa-bug', routerLink: '../static-document/angular-to-the-top'},
         {label: 'Angular Material',
           description: 'introduction to MD', icon: 'fa fa-font-awesome', routerLink: '../static-document/md-material'},
         {label: 'Typography',
@@ -74,7 +70,11 @@ export class LeftMenuComponent {
       ]},
     {
       label: 'Quality',
-      items: []},
+      items: [
+        {label: 'Coverage, is it enough?',
+          description: 'Configuration of JaCoCo and SonarQube',
+          icon: 'fa fa-cog', routerLink: '../static-document/quality-jacoco.md'},
+      ]},
     {
       label: 'Monitoring',
       items: [
@@ -82,6 +82,14 @@ export class LeftMenuComponent {
           icon: '', routerLink: '../static-document/actuator-monitoring'}
       ]
     },
+    {
+      label: 'Documentation',
+      items: [
+        {label: 'Swagger',
+          description: 'REST documentation',
+          icon: 'ffa fa fa-book', routerLink: '../static-document/swagger-config'}
+      ]},
+
     {
       label: 'Cheat Sheet',
       items: [
