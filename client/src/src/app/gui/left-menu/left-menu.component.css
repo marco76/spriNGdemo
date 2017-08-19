@@ -25,3 +25,7 @@ a:hover {
   font-size: smaller;
   color: gray;
 }
+
+md-expansion-panel {
+  width: 350px;
+}
