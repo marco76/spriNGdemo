@@ -42,6 +42,7 @@
                                 <argument>build</argument>
                                 <argument>--target=production</argument>
                                 <argument>--environment=prod</argument>
+                                <argument>--extract-css=false</argument>
                             </arguments>
                         </configuration>
                         <phase>generate-resources</phase>

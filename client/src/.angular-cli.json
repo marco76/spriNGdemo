@@ -21,6 +21,7 @@
       "prefix": "app",
       "styles": [
         "styles.css",
+        "../node_modules/hammerjs/hammer.min.js",
         "../node_modules/font-awesome/css/font-awesome.css"
       ],
       "scripts": [
