@@ -1,11 +1,12 @@
 <div class="mat-typography">
   <md-toolbar color="primary">
-    <button md-icon-button (click)="openedSidenav=!openedSidenav" *ngIf="!bigScreen">
+    <div class="md-toolbar-tools">
+    <button md-icon-button (click)="openedSidenav=!openedSidenav">
       <md-icon class="material-icons">menu</md-icon>
     </button>
 
     <span>Spring Angular Demo <span *ngIf="bigScreen"> - from the development to the production</span></span>
-
+    </div>
   </md-toolbar>
 
   <md-menu x-position="before" #menu="mdMenu">
