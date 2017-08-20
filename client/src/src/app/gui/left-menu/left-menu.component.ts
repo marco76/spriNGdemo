@@ -56,7 +56,10 @@ export class LeftMenuComponent {
           description: 'introduction to MD', icon: 'fa fa-font-awesome', routerLink: '../static-document/md-material'},
         {label: 'Typography',
           description: 'improve the readability of your app', icon: 'fa fa-font-awesome', routerLink: '../static-document/font-google'},
-        {label: 'Font Awesome', icon: 'fa fa-font-awesome', routerLink: '../static-document/font-awesome'}
+        {label: 'Font Awesome', icon: 'fa fa-font-awesome', routerLink: '../static-document/font-awesome'},
+        {label: 'Webpack', description: 'where is webpack in Angular CLI?', icon: 'fa fa-css3',
+          routerLink: '../static-document/angular-cli-webpack'}
+
       ]
     },
     {

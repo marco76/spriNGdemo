@@ -10,7 +10,23 @@ We could configure Angular to use the Hash Style but we prefer to use the HTML5 
 
 ## How to solve the problem with Spring?
 
-The goal is to redirect the requests that return a 404 error (page not found) to the root of the Angular application('/'), Angular will take care of the rest.
+You can redirect the requests that come to the server to the root page of Angular:
+
+``` java
+@Controller
+public class ForwardController {
+
+    @RequestMapping(value = "/**/{[path:[^\\.]*}")
+    public String redirect() {
+        // Forward to home page so that route is preserved.
+        return "forward:/";
+    }
+}
+```
+
+## Alternative method: handle the 404 error
+
+An alternative solution is to redirect the requests that return a 404 error (page not found) to the root of the Angular application('/').
 
 Here the solution implemented with Spring.
 
@@ -37,3 +53,10 @@ public class RestErrorController implements ErrorController {
     }
 }
 ```
+
+This solution has problems with the styles packaged with webpack.
+When the page is refreshed the relative path loaded is e.g. /static-pages/styles.css but it should be /styles.css
+I leave this solution because is commonly used and referenced.  
+
+### Links
+Solution adopted: [StackOverflow](https://stackoverflow.com/questions/24837715/spring-boot-with-angularjs-html5mode)
