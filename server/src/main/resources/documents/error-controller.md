@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class RestErrorController implements ErrorController {
 
     private static final String ERROR_PATH = "/error";
-    private static final String TARGET_PATH = "forward:/index.html";
+    private static final String TARGET_PATH = "forward:/";
 
     @RequestMapping(value = "/error")
     public String error() {
