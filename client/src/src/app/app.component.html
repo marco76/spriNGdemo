@@ -17,13 +17,13 @@
         <app-lateral-menu (onRouteClicked)="onRouteClicked($event)"></app-lateral-menu>
       </md-sidenav>
 
-      <div class="sidenav-content">
+      <div layout="column">
         <md-card>
           <router-outlet></router-outlet>
         </md-card>
-      </div>
+        <app-footer></app-footer>
 
+      </div>
     </md-sidenav-container>
   </div>
-  <app-footer class="mat-typography"></app-footer>
 
