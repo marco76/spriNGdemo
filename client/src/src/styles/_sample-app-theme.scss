@@ -1,0 +1,21 @@
+// Import all the tools needed to customize the theme and extract parts of it
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$sample-app-primary: mat-palette($mat-indigo);
+$sample-app-accent:  mat-palette($mat-amber, A200, A100, A400);
+$sample-app-warn:    mat-palette($mat-red);
+
+$sample-app-theme: mat-light-theme($sample-app-primary, $sample-app-accent, $sample-app-warn);
+// we apply the theme
+@include angular-material-theme($sample-app-theme);
+
+.extra-theme {
+  $extra-primary: mat-palette($mat-teal);
+  $extra-accent:  mat-palette($mat-yellow, 400);
+
+  $extra-theme: mat-light-theme($extra-primary, $extra-accent);
+
+  @include angular-material-theme($extra-theme);
+}
