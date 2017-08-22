@@ -21,11 +21,15 @@ import { MdIconModule } from '@angular/material';
 import { MdSidenavModule, MdListModule } from '@angular/material';
 import { MdExpansionModule} from '@angular/material';
 import { MdSlideToggleModule} from '@angular/material';
+import {MdChipsModule} from '@angular/material';
+import { ThemeComponent } from '../../src/app/page/theme/theme.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'static-document/home', pathMatch: 'full' },
-  { path: 'static-document/:document', component: StaticPageComponent }
+  { path: 'static-document/:document', component: StaticPageComponent },
+  { path: 'page/:document', component: ThemeComponent }
+
   ];
 
 @NgModule({
@@ -35,7 +39,8 @@ const routes: Routes = [
     TechnicalInfoComponent,
     StaticPageComponent,
     FooterComponent,
-    LeftMenuComponent
+    LeftMenuComponent,
+    ThemeComponent
 
   ],
   imports: [
@@ -55,7 +60,8 @@ const routes: Routes = [
     MdSidenavModule,
     MdListModule,
     MdExpansionModule,
-    MdSlideToggleModule
+    MdSlideToggleModule,
+    MdChipsModule
   ],
   providers: [HighlightJsService],
   bootstrap: [AppComponent]
