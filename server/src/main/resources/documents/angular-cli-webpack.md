@@ -19,7 +19,7 @@ For a good reason the Angular CLI development team cannot take the responsibilit
 Save / commit / version your project before the ejection process.
 You will have to manage the webpack for yourself, the present of Angular CLI is a 400-500 lines of code file.
 
-If you really need to configure webpack ng eject you can generate the file with the configuration.
+If you really need to configure webpack ```ng eject``` you can generate the file with the configuration.
 
 You will receive a message similar to this:
 
@@ -39,7 +39,7 @@ Running the equivalent CLI commands will result in an error.
 Some packages were added. Please run "npm install".
 ```
 
-if you try to use ng serve you will receive this error
+Angular CLI is now gone, don't call it again, if you try to use ng serve you will receive this error
 
 ```terminal
 An ejected project cannot use the build command anymore.

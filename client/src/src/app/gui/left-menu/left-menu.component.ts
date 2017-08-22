@@ -78,7 +78,11 @@ export class LeftMenuComponent {
       items: [
         {label: 'Coverage, is it enough?',
           description: 'Configuration of JaCoCo and SonarQube',
-          icon: 'fa fa-cog', routerLink: '../static-document/quality-jacoco.md'},
+          icon: 'fa fa-cog', routerLink: '../static-document/quality-jacoco'},
+        {label: 'Quotes for reviewers',
+          description: 'how to reject a PR with style',
+          icon: 'fa fa-eye', routerLink: '../static-document/quality-code-review-quotes'},
+
       ]},
     {
       label: 'Monitoring',

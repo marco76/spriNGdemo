@@ -16,3 +16,11 @@ nav {
   width: 200px;
   min-width: 100px;
 }
+
+.git-reference {
+  float: right;
+  font-style: italic;
+  margin-right: 10px;
+  color: gray;
+}
+

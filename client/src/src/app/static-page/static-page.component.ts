@@ -14,6 +14,8 @@ import {environment} from '../../environments/environment';
 export class StaticPageComponent implements OnInit {
 
   markdown = '';
+  gitDocument: string;
+  githubReference: string;
 
   static setVariables (markdown: string) {
     if (!markdown) {
@@ -33,8 +35,13 @@ export class StaticPageComponent implements OnInit {
  constructor(private requestService: RequestService, private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {
-    this.route.paramMap.switchMap((params: ParamMap) =>
-      this.requestService.getText('rest/document/' + params.get('document')))
+    this.route.paramMap.switchMap((params: ParamMap) => {
+
+      this.gitDocument = params.get('document');
+      this.githubReference = `${environment.GIT_DOCUMENTS_URL}${this.gitDocument}.md`;
+
+      return this.requestService.getText('rest/document/' + this.gitDocument)
+    })
       .subscribe(
       result => {this.markdown = StaticPageComponent.setVariables(result)},
       error => { console.log(error._body) }
