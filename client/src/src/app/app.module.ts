@@ -12,17 +12,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LeftMenuComponent } from './gui/left-menu/left-menu.component';
 import { TechnicalInfoComponent } from './common/technical-info/technical-info.component';
 import { StaticPageComponent} from './static-page/static-page.component';
-import { MdButtonModule, MdCheckboxModule } from '@angular/material';
-import { MdMenuModule } from '@angular/material';
-import { MdToolbarModule } from '@angular/material';
-import { MdCardModule } from '@angular/material';
-import { MdInputModule } from '@angular/material';
-import { MdIconModule } from '@angular/material';
-import { MdSidenavModule, MdListModule } from '@angular/material';
-import { MdExpansionModule} from '@angular/material';
-import { MdSlideToggleModule} from '@angular/material';
-import {MdChipsModule} from '@angular/material';
-import { ThemeComponent } from '../../src/app/page/theme/theme.component';
+import { MatAutocompleteModule, MatButtonModule, MatCheckboxModule} from '@angular/material';
+import { MatMenuModule } from '@angular/material';
+import { MatToolbarModule } from '@angular/material';
+import { MatCardModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
+import { MatIconModule } from '@angular/material';
+import { MatSidenavModule, MatListModule } from '@angular/material';
+import { MatExpansionModule} from '@angular/material';
+import { MatSlideToggleModule} from '@angular/material';
+import { MatChipsModule} from '@angular/material';
+import { ThemeComponent } from './page/theme/theme.component';
 
 
 const routes: Routes = [
@@ -51,17 +51,18 @@ const routes: Routes = [
     MarkdownModule.forRoot(),
     HttpModule,
     BrowserAnimationsModule,
-    MdButtonModule, MdCheckboxModule,
-    MdMenuModule,
-    MdToolbarModule,
-    MdCardModule,
-    MdInputModule,
-    MdIconModule,
-    MdSidenavModule,
-    MdListModule,
-    MdExpansionModule,
-    MdSlideToggleModule,
-    MdChipsModule
+    MatButtonModule, MatCheckboxModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatInputModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    MatExpansionModule,
+    MatSlideToggleModule,
+    MatChipsModule,
+    MatAutocompleteModule
   ],
   providers: [HighlightJsService],
   bootstrap: [AppComponent]

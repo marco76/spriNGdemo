@@ -1,6 +1,6 @@
-import {Component, OnInit, EventEmitter, Output, ViewEncapsulation} from '@angular/core';
+import {Component, EventEmitter, Output, ViewEncapsulation} from '@angular/core';
 import { Router } from '@angular/router';
-import {MdSlideToggleChange} from '@angular/material';
+import { MatSlideToggleChange } from '@angular/material';
 
 @Component({
   selector: 'app-lateral-menu',
@@ -43,7 +43,14 @@ export class LeftMenuComponent {
     ]},
     {
       label: 'Spring Dev',
-      items: []
+      items: [
+        {
+          label: 'Caching ',
+          description: 'Increase the performances with caching',
+          routerLink: '../static-document/spring-cache'
+        }
+
+      ]
     },
 
 
@@ -123,7 +130,7 @@ export class LeftMenuComponent {
     this.router.navigate([routerLink]);
   }
 
-  onChange(event: MdSlideToggleChange) {
+  onChange(event: MatSlideToggleChange) {
 
     if (event.checked === true) {
       this.showAll = true;

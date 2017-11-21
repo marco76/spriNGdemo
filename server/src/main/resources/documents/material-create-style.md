@@ -79,16 +79,27 @@ We created 2 themes in one class. This is not a good practice but we wanted to s
 With this sample code ...
 
 ```html
-  <md-chip-list>
-    <md-chip color="primary" selected="true">Primary main theme</md-chip>
-    <md-chip color="accent" selected="true">Accent main theme</md-chip>
-  </md-chip-list>
+  <mat-chip-list>
+    <mat-chip color="primary" selected="true">Primary main theme</mat-chip>
+    <mat-chip color="accent" selected="true">Accent main theme</mat-chip>
+  </mat-chip-list>
   <br>
-  <md-chip-list class="extra-theme">
-    <md-chip color="primary" selected="true">Primary extra theme</md-chip>
-    <md-chip color="accent" selected="true">Accent extra theme</md-chip>
-  </md-chip-list>
-</md-card-content>
+  <mat-chip-list class="extra-theme">
+    <mat-chip color="primary" selected="true">Primary extra theme</mat-chip>
+    <mat-chip color="accent" selected="true">Accent extra theme</mat-chip>
+  </mat-chip-list>
+</mat-card-content>
 ```
 ... we can se how the colors are rendered:
+
+  <mat-chip-list>
+    <mat-chip color="primary" selected="true">Primary main theme</mat-chip>
+    <mat-chip color="accent" selected="true">Accent main theme</mat-chip>
+  </mat-chip-list>
+  <br>
+  <mat-chip-list class="extra-theme">
+    <mat-chip color="primary" selected="true">Primary extra theme</mat-chip>
+    <mat-chip color="accent" selected="true">Accent extra theme</mat-chip>
+  </mat-chip-list>
+</mat-card-content>
 

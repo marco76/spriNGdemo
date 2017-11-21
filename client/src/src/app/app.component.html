@@ -1,29 +1,29 @@
 <div class="mat-typography">
-  <md-toolbar color="primary">
-    <div class="md-toolbar-tools">
-    <button md-icon-button (click)="openedSidenav=!openedSidenav">
-      <md-icon class="material-icons">menu</md-icon>
+  <mat-toolbar color="primary">
+    <div class="mat-toolbar-tools">
+    <button mat-icon-button (click)="openedSidenav=!openedSidenav">
+      <mat-icon class="material-icons">menu</mat-icon>
     </button>
 
     <span>Spring Angular Demo <span *ngIf="bigScreen"> - from the development to the production</span></span>
     </div>
-  </md-toolbar>
+  </mat-toolbar>
 
-  <md-menu x-position="before" #menu="mdMenu">
+  <mat-menu x-position="before" #menu="matMenu">
 
-  </md-menu>
-    <md-sidenav-container class="container">
-      <md-sidenav disableClose="false" class="sidenav" #sidenav [opened]="openedSidenav" [mode]="bigScreen ? 'side' : 'side'">
+  </mat-menu>
+    <mat-sidenav-container class="container">
+      <mat-sidenav disableClose="false" class="sidenav" #sidenav [opened]="openedSidenav" [mode]="bigScreen ? 'side' : 'side'">
         <app-lateral-menu (onRouteClicked)="onRouteClicked($event)"></app-lateral-menu>
-      </md-sidenav>
+      </mat-sidenav>
 
       <div layout="column">
-        <md-card>
+        <mat-card>
           <router-outlet></router-outlet>
-        </md-card>
+        </mat-card>
         <app-footer></app-footer>
 
       </div>
-    </md-sidenav-container>
+    </mat-sidenav-container>
   </div>
 
