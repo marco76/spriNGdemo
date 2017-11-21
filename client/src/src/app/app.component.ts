@@ -1,5 +1,5 @@
 import {Component, EventEmitter, HostListener, OnInit, Output, ViewChild} from '@angular/core';
-import {MdSidenav} from '@angular/material';
+import {MatSidenav} from '@angular/material';
 
 @Component({
   selector: 'app-root',

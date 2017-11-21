@@ -1,20 +1,20 @@
 
 <div *ngFor="let category of list">
-<md-expansion-panel expanded = "true" [hideToggle]="false">
-  <md-expansion-panel-header>
-    <md-panel-title>
+<mat-expansion-panel expanded = "true" [hideToggle]="false">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
       {{category.label}}
-    </md-panel-title>
-  </md-expansion-panel-header>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
 
   <div *ngFor="let item of category.items">
-    <md-nav-list dense flex>
-    <a md-list-item (click)="routeTo(item.routerLink)">
-      <span md-list-icon><i [ngClass]="!item.icon ? 'fa fa-file-text-o' : item.icon" aria-hidden="true"></i></span>
-      <h2 md-line><a >{{item.label}}</a> </h2>
-      <p md-line class="list-text-description">{{item.description}}</p>
+    <mat-nav-list dense flex>
+    <a mat-list-item (click)="routeTo(item.routerLink)">
+      <span mat-list-icon><i [ngClass]="!item.icon ? 'fa fa-file-text-o' : item.icon" aria-hidden="true"></i></span>
+      <h2 mat-line><a >{{item.label}}</a> </h2>
+      <p mat-line class="list-text-description">{{item.description}}</p>
     </a>
-    </md-nav-list>
+    </mat-nav-list>
   </div>
 
-</md-expansion-panel></div>
+</mat-expansion-panel></div>
