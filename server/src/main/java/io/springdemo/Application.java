@@ -11,7 +11,9 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * Created by marcomolteni on 10.04.17.
  */
     @SpringBootApplication
-    @EnableCaching
+    // caching disabled, doesn't work in our cloud env.
+    // @EnableCaching
+
     @ComponentScan(basePackages = "io.springdemo")
     @EnableAspectJAutoProxy
     public class Application {
