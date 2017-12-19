@@ -11,4 +11,4 @@ CMD ["java", "-jar", "/usr/src/myapp/myApp.war"]
 # docker build -t javaee/springdemo .
 #
 # run with:
-# docker run --rm -it -p 80:8080  javaee/springdemo
+# docker run --rm -it -p 80:80  javaee/springdemo
