@@ -28,7 +28,7 @@ public class ReadDocumentationServiceImpl implements ReadDocumentationService{
     @Override
     @Cacheable("Document")
     public String readClassPathFile(final String documentPath) {
-        log.info("Start -> readClassPathFile : {}", documentPath);
+        logger.info("Start -> readClassPathFile : {}", documentPath);
 
         String result = "";
 

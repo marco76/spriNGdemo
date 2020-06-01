@@ -1,3 +1,9 @@
+<div style="background-color: #e7f3fe;
+       border-left: 6px solid #2196F3;
+       margin-bottom: 15px;
+                                                     padding: 4px 12px;">I reactivated the project/site after 3 years. A lot changed, some updates will come soon. :)
+                                                     <br> Still using Angular 5.x :O, soon migrating to Java 14, Spring latest, Angular 9</div>
+
 # Java, Spring, Angular, Cloud : How to build a professional application step by step
 
 This website is like a programming book but it's live and it's working.
