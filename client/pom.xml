@@ -6,8 +6,12 @@
         <artifactId>parent</artifactId>
         <groupId>spring-ng-demo</groupId>
         <version>0.0.5-SNAPSHOT</version>
-
     </parent>
+    <properties>
+        <!-- node path, for Windows use 'npm.cmd' -->
+        <npm.path>npm.cmd</npm.path>
+    </properties>
+
     <modelVersion>4.0.0</modelVersion>
     <artifactId>client</artifactId>
     <packaging>war</packaging>
@@ -22,7 +26,7 @@
                         <id>install npm</id>
                         <configuration>
                             <workingDirectory>./src/</workingDirectory>
-                            <executable>npm</executable>
+                            <executable>${npm.path}</executable>
                             <arguments>
                                 <argument>install</argument>
                             </arguments>
@@ -44,21 +48,36 @@
                                 <argument>--extract-css=false</argument>
                             </arguments>
                         </configuration>
-                        <phase>generate-resources</phase>
                         <goals>
                             <goal>exec</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
-
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <configuration>
+                            <target>
+                                <mkdir dir="${project.build.directory}/dist" />
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.2.2</version>
                 <configuration>
                     <webResources>
                         <resource>
-                            <directory>src/dist</directory>
+                            <directory>dist</directory>
                             <targetPath>META-INF/resources</targetPath>
                         </resource>
                     </webResources>

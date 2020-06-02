@@ -20,7 +20,7 @@ FROM openjdk:8-jdk-alpine
 
 MAINTAINER "Marco Molteni <moltenma@gmail.com>"
 
-ADD server/target/server-0.0.4-SNAPSHOT.war /usr/src/myapp/myApp.war
+ADD server/target/server-0.0.5-SNAPSHOT.war /usr/src/myapp/myApp.war
 
 CMD ["java", "-jar", "/usr/src/myapp/myApp.war"]
 ```
@@ -87,9 +87,9 @@ WORKDIR /usr/src/myapp/spriNGdemo
 RUN mvn generate-resources install
 RUN chmod 777 /tmp
 
-RUN yes | cp -rf /usr/src/myapp/spriNGdemo/server/target/server-0.0.4-SNAPSHOT.war /usr/src/myapp
+RUN yes | cp -rf /usr/src/myapp/spriNGdemo/server/target/server-0.0.5-SNAPSHOT.war /usr/src/myapp
 
-CMD ["java", "-jar", "/usr/src/myapp/server-0.0.4-SNAPSHOT.war"]
+CMD ["java", "-jar", "/usr/src/myapp/server-0.0.5-SNAPSHOT.war"]
 ```
 
 ### TODO
